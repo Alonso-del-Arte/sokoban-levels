@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE SokobanLevels SYSTEM "SokobanLev.dtd">
+<SokobanLevels>
+  <Title>Extremely Easy</Title>
+  <Description>The idea is that these levels be as easy as possible. One may restart a level, but that should never be necessary. Deadlock situations are impossible in these levels.</Description>
+  <Email>alonso.delarte@gmail.com</Email>
+  <LevelCollection Copyright="Alonso del Arte" MaxWidth="21" MaxHeight="17">
+    <Level Id="Easy #1" Width="5" Height="3">
+      <L>#####</L>
+      <L>#.$@#</L>
+      <L>#####</L>
+    </Level>
+    <Level Id="Easy #2" Width="7" Height="3">
+      <L>#######</L>
+      <L>#.$@$.#</L>
+      <L>#######</L>
+    </Level>
+    <Level Id="Easy #3" Width="7" Height="5">
+      <L>  ###</L>
+      <L>  #.#</L>
+      <L>###$###</L>
+      <L>#.$@$.#</L>
+      <L>#######</L>
+    </Level>
+    <Level Id="Easy #4" Width="7" Height="7">
+      <L>  ###</L>
+      <L>  #.#</L>
+      <L>###$###</L>
+      <L>#.$@$.#</L>
+      <L>###$###</L>
+      <L>  #.#</L>
+      <L>  ###</L>
+    </Level>
+    <Level Id="Easy #5" Width="7" Height="7">
+      <L> ###</L>
+      <L> #.###</L>
+      <L>##$#.#</L>
+      <L>#.$@$##</L>
+      <L>###$$.#</L>
+      <L>  #.###</L>
+      <L>  ###</L>
+    </Level>
+    <Level Id="Easy #6" Width="7" Height="7">
+      <L>#####</L>
+      <L>#@$.##</L>
+      <L>##$$.##</L>
+      <L> #.$$.#</L>
+      <L> ##.$##</L>
+      <L>  ##.#</L>
+      <L>   ###</L>
+    </Level>
+    <Level Id="Easy #7" Width="9" Height="9">
+      <L>###</L>
+      <L>#.##</L>
+      <L>#$.###</L>
+      <L># $#.####</L>
+      <L>#.$ $ $.#</L>
+      <L>####@#$ #</L>
+      <L>   ###.$#</L>
+      <L>     ##.#</L>
+      <L>      ###</L>
+    </Level>
+    <Level Id="Easy #8" Width="9" Height="10">
+      <L>    ###</L>
+      <L>   ##@#</L>
+      <L>  ## $###</L>
+      <L> ## $.#.#</L>
+      <L>## $.#.$#</L>
+      <L># $.#.$ #</L>
+      <L># .#.$ ##</L>
+      <L># ##$ ##</L>
+      <L>#    ##</L>
+      <L>######</L>
+    </Level>
+    <Level Id="Easy #9" Width="12" Height="12">
+      <L>       ###</L>
+      <L>      ##@#</L>
+      <L>####### $#</L>
+      <L>#    # $.#</L>
+      <L># ##  $.####</L>
+      <L>#$ ###.###.#</L>
+      <L>#.$ #####.$#</L>
+      <L>##.$   #.$ #</L>
+      <L> ##.## #$ ##</L>
+      <L>  #### # ##</L>
+      <L>     #   #</L>
+      <L>     #####</L>
+    </Level>
+    <Level Id="Easy #10" Width="21" Height="17">
+      <L>         ###</L>
+      <L>         #.##</L>
+      <L>         #$.##</L>
+      <L>         # $.#</L>
+      <L>         ## $#</L>
+      <L>          ## #</L>
+      <L>  ########## #</L>
+      <L> ##          #  #####</L>
+      <L>##  ########## ## $.#</L>
+      <L>#  ##   #     ## $.##</L>
+      <L># ## $# #     # $.##</L>
+      <L># # $.# #  #### ###</L>
+      <L>#  $.## ####.## #</L>
+      <L>###.###         #</L>
+      <L>  ### ######$####</L>
+      <L>           #@#</L>
+      <L>           ###</L>
+    </Level>
+  </LevelCollection>
+</SokobanLevels>
