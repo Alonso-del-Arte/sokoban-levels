@@ -1,0 +1,742 @@
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::         Sokoban (c) by Falcon Co., Ltd., Japan         ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::                    File Format 0.17                    ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::                                                        ::
+:: File Notes                                  Optional   ::
+:: Puzzle 1                                    Required   ::
+::    Title                                    Optional*  ::
+::    Board                                    See legend ::
+::    Puzzle Notes                             Optional   ::
+::    Saved Game or Solution 1                 Optional   ::
+::      Title                                  Optional*  ::
+::      Moves                                  See legend ::
+::      Notes                                  Optional   ::
+::    Saved Game or Solution 2                 Optional   ::
+::    ... (more saved games and solutions)                ::
+:: Puzzle 2                                    Optional   ::
+:: ... (more puzzles)                                     ::
+::                                                        ::
+:: Remarks:                                               ::
+::                                                        ::
+:: File Notes                                             ::
+::   File notes consist of unstructured text and          ::
+::   key/value properties, such as "Author: Name". Lines  ::
+::   beginning with "::" are comments meant to be read    ::
+::   only by a person examining the file in a text        ::
+::   editor, and should not be displayed by the Sokoban   ::
+::   program.                                             ::
+::                                                        ::
+::   The optional but recommended property                ::
+::   "Collection: Name" assigns a name to the puzzle      ::
+::   collection. When a collection is copied from the     ::
+::   internet, for example, and pasted into a Sokoban     ::
+::   program, this information allows the collection to   ::
+::   be saved with the proper name.                       ::
+::                                                        ::
+:: Titles                                                 ::
+::   A title line is the last non-blank text line before  ::
+::   a board, a saved game, or a solution, provided the   ::
+::   line is preceded  by a blank line or it is the only  ::
+::   text line at this position in the file.              ::
+::                                                        ::
+::   Title lines are optional unless a single or a last   ::
+::   text line from a preceding puzzle, saved game,       ::
+::   solution, or file header can be mistaken for a title ::
+::   line.                                                ::
+::                                                        ::
+:: Puzzle Notes                                           ::
+::   Two special key/value pairs are supported in puzzle  ::
+::   notes: "Title" and "Author", hence, titles can       ::
+::   either come from a title line or from a key/value    ::
+::   pair.                                                ::
+::                                                        ::
+::::::::::::::::::::::::::: Board ::::::::::::::::::::::::::
+:: Legend.................:      :.................Legend ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: Wall...................: #  # :...................Wall ::
+:: Pusher.................: p  @ :.................Pusher ::
+:: Pusher on goal square..: P  + :..Pusher on goal square ::
+:: Box....................: b  $ :....................Box ::
+:: Box on goal square.....: B  * :.....Box on goal square ::
+:: Goal square............: .  . :............Goal square ::
+:: Floor..................:      :..................Floor ::
+:: Floor..................: -  _ :..................Floor ::
+::                                                        ::
+:: Remarks:                                               ::
+::                                                        ::
+::   The first and the last non-empty square in each row  ::
+::   must be a wall or a box on a goal. An empty interior ::
+::   row is written with at least one "-" or "_".         ::
+::                                                        ::
+::   Boards may be run-length encoded (RLE), e.g.,        ::
+::   "###----p.#" may be encoded as "3#4-p.#", and        ::
+::   "#-#-#-##-#-#-#" may be encoded as "2(3(#-)#)".      ::
+::   A row cannot be split over multiple lines.           ::
+::                                                        ::
+::   Rows may be combined on a single line by using "|"   ::
+::   as a row separator, e.g., "--3#|3#-#|#pb.#|5#".      ::
+::   A "|" at the end of a line is optional and may be    ::
+::   omitted.                                             ::
+::                                                        ::
+::::::::::::::::::::::::::: Moves ::::::::::::::::::::::::::
+:: Legend.................:      :.................Legend ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: Move pusher up.........: u  U :.......Push/pull box up ::
+:: Move pusher down.......: d  D :.....Push/pull box down ::
+:: Move pusher left.......: l  L :.....Push/pull box left ::
+:: Move pusher right......: r  R :....Push/pull box right ::
+:: Begin jump.............: [  ] :...............End jump ::
+:: Begin pusher change....: {  } :......End pusher change ::
+:: Current position.......: *  * :.......Current position ::
+::                                                        ::
+:: Remarks:                                               ::
+::                                                        ::
+::   Moves may be run-length encoded, e.g., "3r4U" means  ::
+::   "rrrUUUU", and "2(3(dr)R)" means "drdrdrRdrdrdrR".   ::
+::   Each line must, however, have at least one proper    ::
+::   non-digit character. Spaces between moves are        ::
+::   allowed.                                             ::
+::                                                        ::
+::   Jumps and pulls: Only in reverse mode saved games    ::
+::   and solutions.                                       ::
+::                                                        ::
+::   Reverse mode saved games and solutions must begin    ::
+::   with a jump, even if it is empty. An example:        ::
+::   "[]U[rr]d".                                          ::
+::                                                        ::
+::   Pusher changes: Only in puzzles with multiple        ::
+::   pushers, e.g., Multiban. Moves inside the braces     ::
+::   depict the relative movement to get from the         ::
+::   currently active pusher to the next active pusher.   ::
+::   At game start, a "{...}" sequence activates the      ::
+::   pusher relative to the top-left pusher. An example:  ::
+::   "{rddd}Urr{uul}uLU". If the top-left pusher is the   ::
+::   first active pusher, then the empty "{}" can be      ::
+::   omitted.                                             ::
+::                                                        ::
+::   The current position is optional and defaults to the ::
+::   position after the last move.                        ::
+::                                                        ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Date Created: 2020-05-16  00:31:33
+Date of Last Change: 2020-05-27  00:42:05
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+These levels are Copyright (c) by Alonso del Arte
+E-mail: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+Collection: FrustratinglyDifficult
+
+
+FrustratinglyDifficult, "#01"
+
+                  ################
+ ##################              #
+ #                # ### ###   ## #
+ # #  ## ######                # ###
+ # ##  #      # # ### ######   #   #
+ #  ## ###### # # #                #
+ #                ########## ### # #
+ #  ## # #######           #   # # #
+ #     #          ######## #   # # #
+ #  ############  #                #
+ #  #         # $@#. #######  #### #
+ # ## #### #####  #        ####  ###
+## #     # #   #### # #          #
+#  #### ## #        # # #######  #
+#            ######## # #  #  #  #
+## ####### # #    #              #
+ # #  #  # # #### #############  ##
+ #                                #
+ ##############################   #
+                              #####
+
+Author: Alonso del Arte
+Email: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The most satisfying Sokoban levels, in my opinion, are
+those that are difficult, that one has to restart the level to figure out the
+solution, but not so difficult that one has to restart several times, and one
+begins to wonder whether the level can even be solved. A level can be
+so difficult that eventually the player stops caring about finding the
+answer.
+
+That's what I'm aiming for in this particular collection. In this first level, it's
+very easy to push a box into a dead end; in some cases, one might have
+to backtrack a little, rather than restart from the beginning.
+
+Solution/Moves 193/79
+dlUUUUruLLLLLLLLLLLLLLulDDDDDDDDldRRRRRRRRlluulluurrrrrdddDDDuulllllll
+ldddrrrrrrrRRRRRRRRRRRRRRRRRRRRRRdrruLdlUUUUUruLLLLLLLLulllddddrruuUru
+LLLLrrrrrrdrrrrrdddddllllllllllllllllllluuuurrrrrrruU
+
+Solution/Pushes 237/77 (YASO 2.142 Optimizer)
+dlUUUUruLLLLLLLLLLLLLLulDDDDDDDDldRRRRRRRRlluulluurrrrrdddDDDuulllllll
+ldddrrrrrrrRRRRRRRRRRRRRRRRRRRRRlllllllllllllllllluuuurrrrrrruurrrrrrr
+drrrrrrddddddlUUUUUruLLLLLLLLulllddddrruuUruLLLLrrrrrrdrrrrrdddddlllll
+lllllllllllllluuuurrrrrrruU
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:00
+Optimizer date: 2020-05-18  15:41:54
+Optimizer metrics: Pushes, moves
+
+Solution 193/79
+dlUUUUruLLLLLLLLLLLLLLulDDDDDDDDldRRRRRRRRlluulluurrrrrdddDDDuulllllll
+ldddrrrrrrrRRRRRRRRRRRRRRRRRRRRRRdrruLdlUUUUUruLLLLLLLLulllddddrruuUru
+LLLLrrrrrrdrrrrrdddddllllllllllllllllllluuuurrrrrrruU
+
+
+FrustratinglyDifficult, "#02"
+
+ ########
+##   #  #
+#       #
+#    #  ####
+###  # ##  ####
+ #   # #      #
+ #   # #      #
+ # ### # ## ###
+ #  # $+* # #
+ #  ##   ## #
+##   ##     ###
+#             #
+#   #######   #
+#####     #####
+
+Author: Alonso del Arte
+Email: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The most satisfying Sokoban levels, in my opinion, are
+those that are difficult, that one has to restart the level to figure out the
+solution, but not so difficult that one has to restart several times, and one
+begins to wonder whether the level can even be solved. A level can be
+so difficult that eventually the player stops caring about finding the
+answer.
+
+That's what I'm aiming for in this particular collection. In this second level,
+be careful not to push on the first move.
+
+Solution/Moves 96/47
+dlUUUUUUruLLLulDDDDrdLulDDDDDrddlluRRRRRRRRRRdrruLdlUUUUUUllldDDlddrru
+LdlUUruuurrrruLLulDrdLulDD
+
+Solution/Pushes 100/45 (YASO 2.142 Optimizer)
+ddrrrruuuullldDDllUUUUUUruLLLulDDDDrdLulDDDDDrddlluRRRRRRRRRRdrruLdlUU
+UUUdddllLdlUUruuuurrrrdLLLulDD
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:00
+Optimizer date: 2020-05-18  15:57:44
+Optimizer metrics: Pushes, moves
+
+SaveGame 103/49
+drUdllUUUUUUruLLLulDDDDrdLulDDDDDrddlluRRRRRRRRRRdrruLdlUUUUUUlllDDDuu
+urrrruLLulDrdLulDDurrrddddllLdlUU
+
+Solution 97/47
+dlUUUUUUruLLLulDDDDrdLulDDDDDrddlluRRRRRRRRRRdrruLdlUUUUUUruLLulDlddDD
+uuuurrdLulDDurrrddddllLdlUU
+
+Solution 117/47
+dlUUUUUUddddddrrdrrruuuullldDDlluuuuuuruLLLulDDDDrdLulDDDDDrddlluRRRRR
+RRRRRdrruLdlUUUUUUruLLulDrdLulDDurrrddddllLdlUU
+
+
+FrustratinglyDifficult, "#03"
+
+        #####
+        #   #
+ ####   # # #   ####
+ #  ##### $ #####  #
+ #       *+*       #
+ #  #############  #
+##                 ##
+#   #############   #
+#   #           #   #
+#####           #####
+
+Author: Alonso del Arte
+Email: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The most satisfying Sokoban levels, in my opinion, are
+those that are difficult, that one has to restart the level to figure out the
+solution, but not so difficult that one has to restart several times, and one
+begins to wonder whether the level can even be solved. A level can be
+so difficult that eventually the player stops caring about finding the
+answer.
+
+That's what I'm aiming for in this particular collection. A hint for this third
+level: you can solve it by pushing the box on the left all the way to the
+left and the box on the right all the way to the right, but it's also possible
+to solve it without moving the box on the left or the box on the right at all.
+
+Best Solution 48/23 (YASO 2.142 Optimizer)
+RRRRRRRurDDDlddrruLdlUUUruLLLLLLLuuullddRluurrdD
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:00
+Optimizer date: 2020-05-18  16:10:15
+Optimizer metrics: Pushes, moves
+
+Solution 88/41
+LLLLLLLulDDDrddlluRdrUluRRRRRRRRRRRRRRRuulllllLuLruulldDrrdrrrrrrrdDld
+drruLdlUUUruLLLLLL
+
+Solution 166/63
+LLLLLLLulDDDrddlluRdrUluRRRRRRRRRRRRRRRuulllllLLruLdLLLLLLLrrrrrrrruuu
+lldDrrdrrrrrrdrDlddrruLdlUUUruLLLLLLrrrrrddlllllllllllllluurrrrrRlllll
+lulDDDrddlluRdrUUUluRRRRRR
+
+
+FrustratinglyDifficult, "#04"
+
+     ### #####
+###### ###   ###
+#    #   # #   #
+# ##  $# # ### #
+#  # # #   #   #
+## ###.##### ###
+#  $ + *       #
+### ##.####### #
+ #   # #       #
+ # # #$  #######
+ #     ###
+ ##### #
+     ###
+
+Author: Alonso del Arte
+Email: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The most satisfying Sokoban levels, in my opinion, are
+those that are difficult, that one has to restart the level to figure out the
+solution, but not so difficult that one has to restart several times, and one
+begins to wonder whether the level can even be solved. A level can be
+so difficult that eventually the player stops caring about finding the
+answer.
+
+That's what I'm aiming for in this particular collection. A hint for this fourth
+level: multiple solutions are possible, but they all require that you first
+push precisely the box that's already on its goal.
+
+Best Solution 71/18 (YASO 2.142 Optimizer)
+rRRRRRRuurruullulldddlluullDDullulllddrddRRlddrddrrUUdrrurrrrrruuLLLLL
+L
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:00
+Optimizer date: 2020-05-20  12:57:27
+Optimizer metrics: Pushes, moves
+
+Solution 73/18
+rRRRRRRuurruullulldddlluullDDullulllddrddRRlddlddrrrrUUdrrurrrrrruuLLL
+LLL
+
+Solution 115/18
+rRRRRRRuurruullulldddlluullDllulllddrddRddrddrrUrrurrrrrruuLLLLLLrrrru
+urruullulldddlluulldDullulllddrddrRlddrddrruU
+
+
+FrustratinglyDifficult, "#05"
+
+          #####
+   ########   #
+   #  #  #  # #
+   #     $  # #
+####  ###*### ####
+#       *+*      #
+#   # # #*# #### #
+### # # #     #  #
+  # # # # ### #  #
+  # #   #   #   ##
+  # ##### #######
+  #       #
+  #########
+
+Author: Alonso del Arte
+Email: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The most satisfying Sokoban levels, in my opinion, are
+those that are difficult, that one has to restart the level to figure out the
+solution, but not so difficult that one has to restart several times, and one
+begins to wonder whether the level can even be solved. A level can be
+so difficult that eventually the player stops caring about finding the
+answer.
+
+That's what I'm aiming for in this particular collection. One thing that
+makes a level really frustrating is if all but one of the boxes are already on
+goals and one has to push them all off before one can get at the box that
+was not already in a goal. This fifth level is not quite that frustrating.
+
+Solution/Moves 60/20 (YASO 2.142 Optimizer)
+RRddrrddrruuruulllLLrruuuullddlLLLLLulDDrdrrRlllLLdlluRRRRRR
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:01
+Optimizer date: 2020-05-19  22:53:57
+Optimizer metrics: Moves, pushes
+
+Solution/Pushes 86/14 (YASO 2.142 Optimizer)
+RRddrrddrruuruullluuuullddlLLLLrrrrruurrddddLLddllddddlllllluuuuuurrrr
+RlllluuurDDldRRR
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:01
+Optimizer date: 2020-05-19  22:53:58
+Optimizer metrics: Pushes, moves
+
+SaveGame 130/40
+LLLLLLrrrrrrRRRRllllDDuurrrruuuulldldLLLLLddlldlluRRRRRRRlllllddddddrr
+rrrruuUUrrrrddrruuruulLLLLrruuuullddllllllulDDrdLLdlluRRRRRR
+
+Solution 136/40
+LLLLLLrrrrrrDDuuRRRRuuuullddlLLLLLddrrrrrrddrrddrruuruulLLLLddlluullll
+llddddddrrrrrruuUUddddlllllluuuuulluRRRRRRRllluuulDDrdLLdlluRRRRRR
+
+Solution 126/42
+LLLLLLrrrrrrDDDuuuRRRRuuuullddlLLLLLddllddddddrrrrrruUUUrrrrddrruuruul
+LLLLddllddddlllllluuuuulluRRRRRRRllluuulDDrdLLdlluRRRRRR
+
+
+FrustratinglyDifficult, "#06"
+
+      ########
+  #####      #
+  #     #### #
+### ###$#  # #
+#   #      # ###
+# ### #### #   #
+#     *+*  ### #
+###  #.**    # #
+  #### $ ### # #
+     ##  #   # #
+     #  ## ### #
+     #  ## #   #
+     #  #    ###
+     #    ####
+     ######
+
+Author: Alonso del Arte
+Email: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The most satisfying Sokoban levels, in my opinion, are
+those that are difficult, that one has to restart the level to figure out the
+solution, but not so difficult that one has to restart several times, and one
+begins to wonder whether the level can even be solved. A level can be
+so difficult that eventually the player stops caring about finding the
+answer.
+
+That's what I'm aiming for in this particular collection. One thing that
+makes a level really frustrating is if all but one of the boxes are already on
+goals and one has to push them all off before one can start putting boxes
+into goals. This sixth level is not quite that frustrating.
+
+Best Solution 111/17 (YASO 2.142 Optimizer)
+RDLrrruLLdrrrrddlldddldlluuuuUdrUUrruuulllllddlllluurruurrrrDullllddll
+ddrrrruurRRRurDDDldlddlddddrruruuurruulLL
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:03
+Optimizer date: 2020-05-26  18:23:22
+Optimizer metrics: Pushes, moves
+
+SaveGame 121/19
+LrRDLrrruLLdrrrrddlldddldlluuuurUUddlUdddddrrurrrurruuuuuulluuuullllld
+DullllddllddrrrRuurRRRurDDDldlddlddddrruruuurruulLL
+
+Solution 113/23
+RDLDDDuuurrruLLdlddrUUddldlddrUUUUrurruuulllllddlllluurruurrrrDulllldd
+llddrrrruurRRRurDDDldlddlddddrruruuurruulLL
+
+Solution 119/25
+LrRDLDDDuuurrruLLdrrrrddlldddrrurruuuuuulluuuullllldDullllddllddrrrRuu
+rRRRurDDDlldlddrUUddldlddrUUUUdddddrruruuurruulLL
+
+
+FrustratinglyDifficult, "#07"
+
+      #####
+  #####   ##
+  #     #  #
+### #####  #
+#   #   #  #
+# ######## ######
+# #      $*#    #
+# # # ###*+*  # #
+# #      ***  # #
+# ########  ### #
+#      #    #   #
+###### # # ## ###
+     #        #
+     ##########
+
+Author: Alonso del Arte
+Email: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The most satisfying Sokoban levels, in my opinion, are
+those that are difficult, that one has to restart the level to figure out the
+solution, but not so difficult that one has to restart several times, and one
+begins to wonder whether the level can even be solved. A level can be
+so difficult that eventually the player stops caring about finding the
+answer.
+
+That's what I'm aiming for in this particular collection. One thing that
+makes a level really frustrating is if all but one of the boxes are already on
+goals and one has to push them all off before one can start putting boxes
+into goals. This seventh level is not quite that frustrating.
+
+Best Solution 80/16 (YASO 2.142 Optimizer)
+RDrruLurrrddddllddllluurUldddlllluullllluuuuuurruurrrrurrdddrdDLLLLLdd
+lluuRRRRRR
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:02
+Optimizer date: 2020-05-19  23:56:04
+Optimizer metrics: Pushes, moves
+
+SaveGame 175/24
+DuRldLLLLLrrrrruUUUddddllllluurrrRllllddrrrrrRddlddlllluullllluuuuuurr
+uurrrrurrdddrdDlllllllddRRRRRllluurrrrruuluurDDDuuululldllllddlldddddd
+rrrrrddrrrruuUdddrrruurruuuulldLrdL
+
+Solution 182/20
+DDDuuuRldddllddrrrrruurruuuulldLurrrddddllddllllllluullllluuuuuurruurr
+rrurrddrddDLLLLLrrrrruuuululldllllddllddddddrrrrrddrrrrUUUdddlllluulll
+lluuuuuurruurrrrurrdddrddlllllddlluuRRRRRR
+
+Solution 186/22
+RlDDDllddlluullllluuuuuurruurrrrurrdddrdDDuLLLLLrrrrruuuululldllllddll
+ddddddrrrrrddrruurruUddllddrrrrruurruuuulldLrurrddddllddlllUUUdddllllu
+ullllluuuuuurruurrrrurrdddrddlllllddlluuRRRRRR
+
+
+FrustratinglyDifficult, "#08"
+
+ ####    #########
+ #  ######       #
+ #         ##### #
+ # ##### ###   # #
+## #   **.     # #
+#  #   * *###### #
+#      **+   #   #
+#######  #$#$# ###
+      #        #
+      ##  ######
+       ####
+
+Author: Alonso del Arte
+Email: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The most satisfying Sokoban levels, in my opinion, are
+those that are difficult, that one has to restart the level to figure out the
+solution, but not so difficult that one has to restart several times, and one
+begins to wonder whether the level can even be solved. A level can be
+so difficult that eventually the player stops caring about finding the
+answer.
+
+That's what I'm aiming for in this particular collection. One thing that
+makes a level really frustrating is if all but one of the boxes are already on
+goals and one has to push them all off before one can start putting boxes
+into goals. This eighth level is not quite that frustrating.
+
+Best Solution 119/16 (YASO 2.142 Optimizer)
+UlLDllllluuuurrrrrrrrurrrrrrdddddllddlllllluUluRdrrrrDullllllluRdllllu
+uuurrrrrrrrurrrrrrdddddllddlLLLUdrruulLddLdlUUdlU
+
+Optimizer: YASO 2.142
+Optimizer time: 00:01:51
+Optimizer date: 2020-05-22  00:28:12
+Optimizer metrics: Pushes, moves
+
+SaveGame 135/24
+UlUdDLLrruLLullddlluuuurrrrrrDullllllddddrruurrddrddrUUluRdrrrrDulllll
+luulldRRlldRRlllluuuurrrrrrrrurrrrrrdddddllddlLLLLdlUUdrrUdrruulL
+
+Solution 216/40
+UlURRRRllllLLrrdLDurDuurrrrurrdLLLLLdlluRddlllllluuuurrrrrrDurrurrrrrr
+dddddllddllllllUUluRdddlUUrrrrrDulllllllllluuuurrrrrrrrurrrrrrdddddlld
+dlLLLLdlUUluRllluluRRDldRlllluuuurrrrrrrrurrrrrrdddddllddlluullDurrddl
+LLdlUU
+
+Solution 257/58
+UlURRRRllldlLLrruLLrdDllllluuuurrrrrrrrurrrrrrdddddllddlllllluUluRuUdr
+rrrurrdLLLLLLdlluRRllddlluuRRRddllUluRRddrrddlUUddrrrrrrruurruuuuullll
+lldlLLLLLLulDDDDldRRRurrdrrrrrrDullllllulldlluuuurrrrrrrrurrrrrrdddddl
+lddlLLLLdlUUluRddrrrruullDurrddlLLdlUUlululldRR
+
+
+FrustratinglyDifficult, "#09"
+
+      #####
+      #   #
+####### # #####
+#       #     #
+# ##### ##### #
+# #    $    # #
+# #   *.*   # #
+# #   *+*   # #
+# #   **.#  # #
+# #    #    # #
+# #### ### ## #
+#     $ $     #
+#####   ## ####
+    ## ##  #
+    #     ##
+    #######
+
+Author: Alonso del Arte
+Email: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note:The most satisfying Sokoban levels, in my opinion, are
+those that are difficult, that one has to restart the level to figure out the
+solution, but not so difficult that one has to restart several times, and one
+begins to wonder whether the level can even be solved. A level can be
+so difficult that eventually the player stops caring about finding the
+answer.
+
+That's what I'm aiming for in this particular collection. One thing that
+makes a level really frustrating is if all but one of the boxes are already on
+goals and one has to push them all off before one can start putting boxes
+into goals. This ninth level is not quite that frustrating.
+
+Best Solution 116/27
+LLrruLLrrRDluUllddddrUluRldlluRRlluRRurrrrrdLrdddddddldllluuUUUddrRRll
+dlddrrruruUUUUruLLrddddrrruuuuuuuulllluullddDD
+
+Solution 134/29
+uUdLLrrdLLddrUluurrurrrddddddddldllluuUUUddrRRlldlddrrruruUUUUruulldLr
+uulDDrurrdLLullllulldRRRRllllddrUluRRdddrddllllluuuuuuuurrrrrrDD
+
+Solution 116/31 (YASO 2.142 Optimizer)
+LLrruUUUdddLLdddrUluRurRDrrddddddldllluuUUUllluuRRlluRRdddrddrRRlllddd
+rrruruUUUUruLLruLrdddddrrruuuuuuuulllluullDDDD
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:09
+Optimizer date: 2020-05-21  22:48:42
+Optimizer metrics: Pushes, moves
+
+Solution 134/31
+uUUUddddLLrruLLrrRDlllddrUluRurrdrrddddddldllluuUUUllluuRRlluRRurrrrrd
+LullllddddrddrRRllldddrrruruUUUUruLLrddddrrruuuuuuuulllluullDDDD
+
+Solution 162/31
+LLrruLLrrRDlllddrUddDDurRRRddldlllUUUUUddllllluuuuuuuurrrrrrdDrrrdLull
+llddRluulldRRlldRRuurruuuurrddrrrrddddddddlLrruuuuuuuulllluullddddlldd
+ddrdddddrrruruUUUUruLL
+
+
+FrustratinglyDifficult, "#10"
+
+######
+#    ###########
+#              #
+#  ##########  #
+#  #   #    # ##
+#      #    # #
+#  ###      # #
+## # +*     # #
+ # #  **    # #
+ # #   **  ## #
+## #    ** #  ##
+#  #     **    #
+#  ###### $#   #
+#          #####
+#  #########
+####
+
+Author: Alonso del Arte
+Email: alonso.delarte@gmail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The most satisfying Sokoban levels, in my opinion, are 
+those that are difficult, that one has to restart the level to figure out the 
+solution, but not so difficult that one has to restart several times, and one 
+begins to wonder whether the level can even be solved. A level can be 
+so difficult that eventually the player stops caring about finding the 
+answer.
+
+That's what I'm aiming for in this particular collection. One thing that 
+makes a level really frustrating is if all but one of the boxes are already on 
+goals and one has to push them all off before one can start putting boxes 
+into goals. This tenth level would be that frustrating except it's possible to 
+put some boxes back in their goals after pushing them off.
+
+Best Solution 154/46
+RDRDRDRDRUUUlulLLdlddrUddrUrrruLuLrrruLLLLulullllddddddddrrrrrrrrUUUUd
+llldRRuuuurrdLulDDrdLrDuuuulllulullllddddddddrrrrrrrrUdlUrUUUluurrdLul
+DDrddRRdrruLLL
+
+Solution 210/50
+RDRDRDRDRRRlllululullddrUluururrdLLrddrUruLLddlddrUUrurrdLLrddrUUluurr
+dLLulDrrdddrrdrUllluuuulllulullllddddddddrrrrrrrrUUUUUdddddlUUUUUddlld
+RuruuluurDDDrdLuuuurrdLulDDDuuulllulllluuurrrrrrrrrrrdddddddDlddrruLLL
+
+Solution 166/66
+RRlDDuRRlDRlllddrrrUUdRDRRRdrUUUUUUUUUruLLLLLLLLLLLulDDDldRRRRurDDrdLr
+urrdLLddrUdddllUUddrUruuluurrdLulDrrrdLulDDurrdLddrUUUluurrdLulDDDuuul
+llullllddddddddrrrrrrrUdrU
+
+Solution 234/54 (YASO 2.142 Optimizer)
+RDRRlUldDlddrruUluuuRRdrUrdddlUUddLLddrUUrrdLLuULuRlluullllddddddddrrr
+rrrruUllUUUruLLuulllluuurrrrrrrrrrrdddddddddllLuLLdllluuRRuuulullllddd
+dddddrrrrrrrrUdlllllllluuuuuuuurrrrddrrdDrruuLLLddllddrrUUddlUluRRRurr
+dLLrruuuuLulDDDDuuurDDDD
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:08
+Optimizer date: 2020-05-20  13:31:56
+Optimizer metrics: Pushes, moves
+
+Solution 216/64
+RRlDDuRRlDRlllddrrrURDRRRdrUUUUUUUUUruLLLLLLLLLLLulDDDldRRRRurDDrdLrur
+rdLLddllddrUUddrUUUrDuuulDDrurrddLruLLrrdDuuulllulullllddddddddrrrrrrr
+UUUruuluulllulllluuurrrrrrrrrrrdddddddddllLuuulDuuulllullllddddddddrrr
+rrrrrU
+
+Solution 246/94
+RRRdrUUdlllDDuRRurrddlUUllllddddrruUUluRRdrdLLddrUUluRdrrdLLrDRRRdrUUU
+UUUUUUruLLLLLLLLLLLulDDDldRRRRurDDrdLuullllddddddddrrrrrrrUdrUUUlluuuu
+uurrddddDDlldllluuRRurDrruLLLrrruLLLddllddrUluRRRRdrUllllddrUUUruulDrr
+rrdLLulDrdLrruuuLruulldDDDuuuurDDDDD
