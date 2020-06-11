@@ -120,12 +120,12 @@
 ::   position after the last move.                        ::
 ::                                                        ::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-Date Created: 2020-05-16  00:31:33
-Date of Last Change: 2020-05-26  21:28:39
+Date Created: 2020-05-26  14:45:09
+Date of Last Change: 2020-06-10  21:12:57
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 These levels are Copyright (c) by Alonso del Arte
-E-mail: alonso.delarte@gmail.com
+E-mail: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 Collection: SeeminglyHard
 
@@ -143,7 +143,7 @@ SeeminglyHard, "#01"
 ###  ########
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -179,7 +179,7 @@ SeeminglyHard, "#02"
  ###    ####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -216,7 +216,7 @@ SeeminglyHard, "#03"
  ###    ####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -256,7 +256,7 @@ SeeminglyHard, "#04"
         #####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -304,7 +304,7 @@ SeeminglyHard, "#05"
    #################
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -324,10 +324,6 @@ Optimizer: YASO 2.142
 Optimizer time: 00:00:00
 Optimizer date: 2020-05-17  13:51:53
 Optimizer metrics: Pushes, moves
-
-SaveGame 93/9
-rdLrRldddLddlllllluuullluuuuuurrruurrrurrrrdddDuuuulllldlllddllldddddd
-rrrdddrrrrrruuLLulldRRR
 
 Solution 41/7
 rdRdllUllllllluurrruurrrurrdDDlDurrddlUdL
@@ -355,7 +351,7 @@ SeeminglyHard, "#06"
  ####        ####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -365,9 +361,9 @@ Author's note: The idea is that these levels seem difficult, and make it
 easy to mess up in the first few moves if not on the very first move, but
 are actually quite easy once one has figured out the basic idea.
 
-Solution/Moves 140/36
-DrdLLLLLLdlUUUUUUUUrruuurrrrDDuulllldddllluRRlddddddddrrrrrruuuuuluuur
-uulllldDuurrrrddlddrUUUddddddddlUruLLLrrrrrdLulDDrdrrrruuuuuLLdlUUluRR
+Solution/Moves 132/36
+DrdLLLLLLdlUUUUUUUUrruuurrrrDDuulllldddllluRRlddddddddrrrrruUruLLLrruu
+uuuruulllldDuurrrrddlddrUUUddddddrrdLulDDrdrrrruuuuuLLdlUUluRR
 
 Solution/Pushes 153/32 (YASO 2.142 Optimizer)
 DlUddllllluuuuuuuurruurrrrDDrdddddlLLLrrrddrdrrrruuuuuLrdddddllllLLLLL
@@ -378,6 +374,15 @@ Optimizer: YASO 2.142
 Optimizer time: 00:00:38
 Optimizer date: 2020-05-17  14:58:34
 Optimizer metrics: Pushes, moves
+
+SaveGame 144/34
+DrdLLLLLLdlUUUUUUUUrruuurrrrDDuulllldddllluRRlddddddddrrrrruUruLLLuuru
+uurruulllldDuurrrrddlddrUUUddddddrrdLulDDrdrrrruuuuuLrdddddlllluuuurrU
+UluR
+
+Solution 140/36
+DrdLLLLLLdlUUUUUUUUrruuurrrrDDuulllldddllluRRlddddddddrrrrrruuuuuluuur
+uulllldDuurrrrddlddrUUUddddddddlUruLLLrrrrrdLulDDrdrrrruuuuuLLdlUUluRR
 
 Solution 142/36
 DrdLLLLLLdlUUUUUUUUluRdrruuurrrrDDuulllldddlluRlddddddddrrrrrruuuuuuru
@@ -411,7 +416,7 @@ SeeminglyHard, "#07"
    #########
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -433,10 +438,6 @@ Optimizer metrics: Moves, pushes
 Solution/Pushes 138/44
 uurrrrddddlldddllluRRRRRlluuulUdrdddlllluuurUUruLLLLulDDDDDDuuuuurrrrr
 ddrdLdDDDrdLuuuRluurrdDDDrdLuuullLLdlUruuRlddrruUruUluRRRRurDDDDrdLL
-
-SaveGame 140/50
-uurrrrddddllulUUluRRRRurDDDDrdLLuuuullldddLLUUruLLLLulDDDDDDuuuuurrrrd
-drrrdddddllluRRRRRllllUUUlulDDDRdLdlUUruurrdDDDrdLrruuuLruulldDDldRurD
 
 Solution 118/48
 uurrrrddddllulUUluRRRRurDDDDrdLLuuuullldddLLUUruLLLLulDDDDDDuuuuurrrrd
@@ -460,7 +461,7 @@ SeeminglyHard, "#08"
 ####        ####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -480,13 +481,6 @@ Optimizer time: 00:00:24
 Optimizer date: 2020-05-18  13:44:04
 Optimizer metrics: Pushes, moves
 
-SaveGame 295/95
-urrdDuRlulldRluulldRurrddlUUUddlldRurrdRdDDDrdLLLLLLullddrUUUUUUdddddr
-rrrrruuuuuullldRRurDDDDDrdLLLLLLullddrUUUUdddrrrrrrruuullUUUUluRdrUddd
-ddllUruulldRRurDDDDDrdLLLLLLullddrUluRRRRdrrrrrrrruuuuuulllDurrddldllu
-RRllllldlUruulldRRRurDDldRurDDDldRRRRllluuuuruurrrrdddddddlUUUUUUruLul
-llddLdlluurDDDD
-
 Solution 237/87
 urrdDDDDrdLLLLLLullddrUUUUUUdddddrrrrrruuuuuulldRurDDDDDrdLLLLLLullddr
 UUUUdddrrrrrruuuuuuulllldRRRurDDDDDDrdLLLLLLullddrUluRRRRdrrruuuuuulll
@@ -502,14 +496,14 @@ SeeminglyHard, "#09"
 # ..#  ###  ...###    #  $     #
 # $$##     #$$$  #    # $$ #   #
 #+$  #######   # ###### .#.# ###
-#### ##      # #          ## #
-   # ## ###### ############# #
+#### #       # #          ## #
+   # ## ###### ############  #
    #                       # #
    #######################   #
-            ###          #####
+                         #####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -536,10 +530,6 @@ Optimizer: YASO 2.142
 Optimizer time: 00:00:18
 Optimizer date: 2020-05-16  21:23:10
 Optimizer metrics: Pushes, moves
-
-SaveGame 117/21
-uuuurrrrddrdrrrrurrrrDrrddrrrrrrruuurDRluRRDuRRdrruLLLLdlluRdrUrrddddd
-dllulllllllllllluuUUdlUdlUddlllllddllluuulLUdrU
 
 Solution 117/21
 uuuurrrrddrdrrrrurrrrDrrddrrrrrrruuurDRluRRDuRRdrruLLLLdlluRdrUrrddddd
@@ -571,7 +561,7 @@ SeeminglyHard, "#10"
      #############
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -589,6 +579,10 @@ Optimizer: YASO 2.142
 Optimizer time: 00:00:08
 Optimizer date: 2020-05-18  14:23:48
 Optimizer metrics: Pushes, moves
+
+SaveGame 83/13
+uullululDlddrrUdlluulululululuRuulllldddddddddDrrrRRddrrrrrrrrrruullLu
+LuuLLuLuulLuL
 
 Solution 95/15
 uulluullDllululululuRuulllldddddddddDrrrRRddrrrrrrrrrruulluullulllddrU

@@ -120,12 +120,12 @@
 ::   position after the last move.                        ::
 ::                                                        ::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-Date Created: 2020-05-16  00:31:33
-Date of Last Change: 2020-05-27  00:42:05
+Date Created: 2020-05-26  14:45:09
+Date of Last Change: 2020-06-10  22:30:09
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 These levels are Copyright (c) by Alonso del Arte
-E-mail: alonso.delarte@gmail.com
+E-mail: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 Collection: FrustratinglyDifficult
 
@@ -154,7 +154,7 @@ FrustratinglyDifficult, "#01"
                               #####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -211,7 +211,7 @@ FrustratinglyDifficult, "#02"
 #####     #####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -240,10 +240,6 @@ Optimizer time: 00:00:00
 Optimizer date: 2020-05-18  15:57:44
 Optimizer metrics: Pushes, moves
 
-SaveGame 103/49
-drUdllUUUUUUruLLLulDDDDrdLulDDDDDrddlluRRRRRRRRRRdrruLdlUUUUUUlllDDDuu
-urrrruLLulDrdLulDDurrrddddllLdlUU
-
 Solution 97/47
 dlUUUUUUruLLLulDDDDrdLulDDDDDrddlluRRRRRRRRRRdrruLdlUUUUUUruLLulDlddDD
 uuuurrdLulDDurrrddddllLdlUU
@@ -267,7 +263,7 @@ FrustratinglyDifficult, "#03"
 #####           #####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -320,7 +316,7 @@ FrustratinglyDifficult, "#04"
      ###
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -372,7 +368,7 @@ FrustratinglyDifficult, "#05"
   #########
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -407,10 +403,6 @@ Optimizer time: 00:00:01
 Optimizer date: 2020-05-19  22:53:58
 Optimizer metrics: Pushes, moves
 
-SaveGame 130/40
-LLLLLLrrrrrrRRRRllllDDuurrrruuuulldldLLLLLddlldlluRRRRRRRlllllddddddrr
-rrrruuUUrrrrddrruuruulLLLLrruuuullddllllllulDDrdLLdlluRRRRRR
-
 Solution 136/40
 LLLLLLrrrrrrDDuuRRRRuuuullddlLLLLLddrrrrrrddrrddrruuruulLLLLddlluullll
 llddddddrrrrrruuUUddddlllllluuuuulluRRRRRRRllluuulDDrdLLdlluRRRRRR
@@ -439,7 +431,7 @@ FrustratinglyDifficult, "#06"
      ######
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -466,9 +458,9 @@ Optimizer time: 00:00:03
 Optimizer date: 2020-05-26  18:23:22
 Optimizer metrics: Pushes, moves
 
-SaveGame 121/19
-LrRDLrrruLLdrrrrddlldddldlluuuurUUddlUdddddrrurrrurruuuuuulluuuullllld
-DullllddllddrrrRuurRRRurDDDldlddlddddrruruuurruulLL
+SaveGame 131/25
+LrRDLDDDlddrUUUUUddrUdlddddrruruuurruulllLrruLdrrrddlldddrrurruuuuuull
+uuuullllldDullllddllddrrrRuurRRRurDDDldlddlddddrruruuurruulLL
 
 Solution 113/23
 RDLDDDuuurrruLLdlddrUUddldlddrUUUUrurruuulllllddlllluurruurrrrDulllldd
@@ -497,7 +489,7 @@ FrustratinglyDifficult, "#07"
      ##########
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -524,10 +516,10 @@ Optimizer time: 00:00:02
 Optimizer date: 2020-05-19  23:56:04
 Optimizer metrics: Pushes, moves
 
-SaveGame 175/24
-DuRldLLLLLrrrrruUUUddddllllluurrrRllllddrrrrrRddlddlllluullllluuuuuurr
-uurrrrurrdddrdDlllllllddRRRRRllluurrrrruuluurDDDuuululldllllddlldddddd
-rrrrrddrrrruuUdddrrruurruuuulldLrdL
+SaveGame 161/26
+UUUdddDDDuuRlLLLLLuurrrRllllddrrrrrddllddlluullllluuuuuurruurrrrurrddd
+rdDlllllllddRRRRRllluurrrrruuluurDDDuuululldllllddllddddddrrrrrddrrrrU
+UUdddrrruurruuuullddL
 
 Solution 182/20
 DDDuuuRldddllddrrrrruurruuuulldLurrrddddllddllllllluullllluuuuuurruurr
@@ -555,7 +547,7 @@ FrustratinglyDifficult, "#08"
        ####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -573,7 +565,11 @@ makes a level really frustrating is if all but one of the boxes are already on
 goals and one has to push them all off before one can start putting boxes
 into goals. This eighth level is not quite that frustrating.
 
-Best Solution 119/16 (YASO 2.142 Optimizer)
+Solution/Moves 91/20
+UlDrrrrDullllLruLLrdddrUUluRllulldRRldRlllluuuurrrrrrrrurrrrrrdddddlld
+dlLLLLdlUUdrrUdrruulL
+
+Solution/Pushes 119/16 (YASO 2.142 Optimizer)
 UlLDllllluuuurrrrrrrrurrrrrrdddddllddlllllluUluRdrrrrDullllllluRdllllu
 uuurrrrrrrrurrrrrrdddddllddlLLLUdrruulLddLdlUUdlU
 
@@ -582,9 +578,9 @@ Optimizer time: 00:01:51
 Optimizer date: 2020-05-22  00:28:12
 Optimizer metrics: Pushes, moves
 
-SaveGame 135/24
-UlUdDLLrruLLullddlluuuurrrrrrDullllllddddrruurrddrddrUUluRdrrrrDulllll
-luulldRRlldRRlllluuuurrrrrrrrurrrrrrdddddllddlLLLLdlUUdrrUdrruulL
+Solution 93/20
+UlDLruLLrdddrUUluRdrrrrDulllllululldRRldRlllluuuurrrrrrrrurrrrrrdddddl
+lddlLLLLdlUUdrrUdrruulL
 
 Solution 216/40
 UlURRRRllllLLrrdLDurDuurrrrurrdLLLLLdlluRddlllllluuuurrrrrrDurrurrrrrr
@@ -619,7 +615,7 @@ FrustratinglyDifficult, "#09"
     #######
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -637,7 +633,28 @@ makes a level really frustrating is if all but one of the boxes are already on
 goals and one has to push them all off before one can start putting boxes
 into goals. This ninth level is not quite that frustrating.
 
-Best Solution 116/27
+Best Solution 96/19 (YASO 2.142 Optimizer)
+uUllddRlddrUluuurrdRDrruLrdddddddldllluuUUUddrRRllldddrrruruUUUUruLLrd
+dddrrruuuuuuuulllluullddDD
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:14
+Optimizer date: 2020-05-30  01:16:02
+Optimizer metrics: Pushes, moves
+
+SaveGame 114/27
+LLrruLLrrRDuurrdLdllllddrUluRluulldRRlldRRddrdDllllluuuuuuuurrrrrrdDrr
+rddddddddldllluUUUUddrRRllldddrrruruUUUUruLL
+
+Solution 114/23 (2)
+uUdLrdLruurrdLDlluRlulldRldRRlddrUluuurrrrrddddddddldllluuUUUddrRRlldl
+ddrrruruUUUUruLLrddddrrruuuuuuuulllluullddDD
+
+Solution 120/23
+LruLrUdRDrruLulllllddRRlluRdddrUluuurrrrrddddddrrruuuuuuuulllluullddDD
+uullllllddddddddrrrrdrUUUddrRRlldlddrrruruUUUUruLL
+
+Solution 116/27
 LLrruLLrrRDluUllddddrUluRldlluRRlluRRurrrrrdLrdddddddldllluuUUUddrRRll
 dlddrrruruUUUUruLLrddddrrruuuuuuuulllluullddDD
 
@@ -663,6 +680,10 @@ LLrruLLrrRDlllddrUddDDurRRRddldlllUUUUUddllllluuuuuuuurrrrrrdDrrrdLull
 llddRluulldRRlldRRuurruuuurrddrrrrddddddddlLrruuuuuuuulllluullddddlldd
 ddrdddddrrruruUUUUruLL
 
+Solution 114/23
+uUdLrdLruurrdLDlluRlulldRldRRlddrUluuurrrrrddddddddldllluuUUUddrRRlldl
+ddrrruruUUUUruLLrddddrrruuuuuuuulllluullddDD
+
 
 FrustratinglyDifficult, "#10"
 
@@ -684,26 +705,50 @@ FrustratinglyDifficult, "#10"
 ####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
 distributed for non-commercial use.
 
-Author's note: The most satisfying Sokoban levels, in my opinion, are 
-those that are difficult, that one has to restart the level to figure out the 
-solution, but not so difficult that one has to restart several times, and one 
-begins to wonder whether the level can even be solved. A level can be 
-so difficult that eventually the player stops caring about finding the 
+Author's note: The most satisfying Sokoban levels, in my opinion, are
+those that are difficult, that one has to restart the level to figure out the
+solution, but not so difficult that one has to restart several times, and one
+begins to wonder whether the level can even be solved. A level can be
+so difficult that eventually the player stops caring about finding the
 answer.
 
-That's what I'm aiming for in this particular collection. One thing that 
-makes a level really frustrating is if all but one of the boxes are already on 
-goals and one has to push them all off before one can start putting boxes 
-into goals. This tenth level would be that frustrating except it's possible to 
+That's what I'm aiming for in this particular collection. One thing that
+makes a level really frustrating is if all but one of the boxes are already on
+goals and one has to push them all off before one can start putting boxes
+into goals. This tenth level would be that frustrating except it's possible to
 put some boxes back in their goals after pushing them off.
 
-Best Solution 154/46
+Best Solution 116/40 (YASO 2.142 Optimizer)
+RDuurrdLrdLDLdlUUdddrrUURurrdLLDRDRUUUruLLulllullllddddddddrrrrrrrUUdd
+rUUUUlldldRuuuruulDDDuurrrdLLulDrrdddRRdrruLLL
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:12
+Optimizer date: 2020-05-30  01:41:47
+Optimizer metrics: Moves, pushes
+
+SaveGame 210/46
+RDRDRDRDRlulululuurrdLLdlddrUUrurrdLLdlddrUUrurrdLLrddrUUUruLLulDDuull
+ullllddddddddrrrrrrrrUUUUUdddRRlllulldRRuuuuulllullllddddddddrrrrrrrUU
+ddllllllluuuuuuuuuuurrrrrrrrrrrddddddddldlLuLuuuurrdLulDDDrddrrdrruLLL
+
+Solution 164/42
+RDRDRDRDRlulululuurrdLLdlddrUUrurrdLLdlddrUUdrrdrUUUdLLrruruLLulDDuull
+ullllddddddddrrrrrrrrUUUUddddlUUUlldRurruUlDrdLruuruLulDDDuuulllullllu
+uurrrrrrrrrrrdddddddddlL
+
+Solution 142/44
+RDRDRDRDRlulululuurrdLLdlddrUUrurrdLLdlddrUUrurrdLLrddrUUluurrdLLulDuu
+llullllddddddddrrrrrrrrUUUUddddlUUUlldRurruUlDrdLruuruLulDDDrddRRdrruL
+LL
+
+Solution 154/46
 RDRDRDRDRUUUlulLLdlddrUddrUrrruLuLrrruLLLLulullllddddddddrrrrrrrrUUUUd
 llldRRuuuurrdLulDDrdLrDuuuulllulullllddddddddrrrrrrrrUdlUrUUUluurrdLul
 DDrddRRdrruLLL

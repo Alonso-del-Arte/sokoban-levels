@@ -1,0 +1,853 @@
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::         Sokoban (c) by Falcon Co., Ltd., Japan         ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::                    File Format 0.17                    ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::                                                        ::
+:: File Notes                                  Optional   ::
+:: Puzzle 1                                    Required   ::
+::    Title                                    Optional*  ::
+::    Board                                    See legend ::
+::    Puzzle Notes                             Optional   ::
+::    Saved Game or Solution 1                 Optional   ::
+::      Title                                  Optional*  ::
+::      Moves                                  See legend ::
+::      Notes                                  Optional   ::
+::    Saved Game or Solution 2                 Optional   ::
+::    ... (more saved games and solutions)                ::
+:: Puzzle 2                                    Optional   ::
+:: ... (more puzzles)                                     ::
+::                                                        ::
+:: Remarks:                                               ::
+::                                                        ::
+:: File Notes                                             ::
+::   File notes consist of unstructured text and          ::
+::   key/value properties, such as "Author: Name". Lines  ::
+::   beginning with "::" are comments meant to be read    ::
+::   only by a person examining the file in a text        ::
+::   editor, and should not be displayed by the Sokoban   ::
+::   program.                                             ::
+::                                                        ::
+::   The optional but recommended property                ::
+::   "Collection: Name" assigns a name to the puzzle      ::
+::   collection. When a collection is copied from the     ::
+::   internet, for example, and pasted into a Sokoban     ::
+::   program, this information allows the collection to   ::
+::   be saved with the proper name.                       ::
+::                                                        ::
+:: Titles                                                 ::
+::   A title line is the last non-blank text line before  ::
+::   a board, a saved game, or a solution, provided the   ::
+::   line is preceded  by a blank line or it is the only  ::
+::   text line at this position in the file.              ::
+::                                                        ::
+::   Title lines are optional unless a single or a last   ::
+::   text line from a preceding puzzle, saved game,       ::
+::   solution, or file header can be mistaken for a title ::
+::   line.                                                ::
+::                                                        ::
+:: Puzzle Notes                                           ::
+::   Two special key/value pairs are supported in puzzle  ::
+::   notes: "Title" and "Author", hence, titles can       ::
+::   either come from a title line or from a key/value    ::
+::   pair.                                                ::
+::                                                        ::
+::::::::::::::::::::::::::: Board ::::::::::::::::::::::::::
+:: Legend.................:      :.................Legend ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: Wall...................: #  # :...................Wall ::
+:: Pusher.................: p  @ :.................Pusher ::
+:: Pusher on goal square..: P  + :..Pusher on goal square ::
+:: Box....................: b  $ :....................Box ::
+:: Box on goal square.....: B  * :.....Box on goal square ::
+:: Goal square............: .  . :............Goal square ::
+:: Floor..................:      :..................Floor ::
+:: Floor..................: -  _ :..................Floor ::
+::                                                        ::
+:: Remarks:                                               ::
+::                                                        ::
+::   The first and the last non-empty square in each row  ::
+::   must be a wall or a box on a goal. An empty interior ::
+::   row is written with at least one "-" or "_".         ::
+::                                                        ::
+::   Boards may be run-length encoded (RLE), e.g.,        ::
+::   "###----p.#" may be encoded as "3#4-p.#", and        ::
+::   "#-#-#-##-#-#-#" may be encoded as "2(3(#-)#)".      ::
+::   A row cannot be split over multiple lines.           ::
+::                                                        ::
+::   Rows may be combined on a single line by using "|"   ::
+::   as a row separator, e.g., "--3#|3#-#|#pb.#|5#".      ::
+::   A "|" at the end of a line is optional and may be    ::
+::   omitted.                                             ::
+::                                                        ::
+::::::::::::::::::::::::::: Moves ::::::::::::::::::::::::::
+:: Legend.................:      :.................Legend ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: Move pusher up.........: u  U :.......Push/pull box up ::
+:: Move pusher down.......: d  D :.....Push/pull box down ::
+:: Move pusher left.......: l  L :.....Push/pull box left ::
+:: Move pusher right......: r  R :....Push/pull box right ::
+:: Begin jump.............: [  ] :...............End jump ::
+:: Begin pusher change....: {  } :......End pusher change ::
+:: Current position.......: *  * :.......Current position ::
+::                                                        ::
+:: Remarks:                                               ::
+::                                                        ::
+::   Moves may be run-length encoded, e.g., "3r4U" means  ::
+::   "rrrUUUU", and "2(3(dr)R)" means "drdrdrRdrdrdrR".   ::
+::   Each line must, however, have at least one proper    ::
+::   non-digit character. Spaces between moves are        ::
+::   allowed.                                             ::
+::                                                        ::
+::   Jumps and pulls: Only in reverse mode saved games    ::
+::   and solutions.                                       ::
+::                                                        ::
+::   Reverse mode saved games and solutions must begin    ::
+::   with a jump, even if it is empty. An example:        ::
+::   "[]U[rr]d".                                          ::
+::                                                        ::
+::   Pusher changes: Only in puzzles with multiple        ::
+::   pushers, e.g., Multiban. Moves inside the braces     ::
+::   depict the relative movement to get from the         ::
+::   currently active pusher to the next active pusher.   ::
+::   At game start, a "{...}" sequence activates the      ::
+::   pusher relative to the top-left pusher. An example:  ::
+::   "{rddd}Urr{uul}uLU". If the top-left pusher is the   ::
+::   first active pusher, then the empty "{}" can be      ::
+::   omitted.                                             ::
+::                                                        ::
+::   The current position is optional and defaults to the ::
+::   position after the last move.                        ::
+::                                                        ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Date Created: 2020-06-10  12:16:45
+Date of Last Change: 2020-06-10  23:15:18
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+These levels are Copyright (c) by Alonso del Arte
+E-mail: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+Collection: Illustrative
+
+
+IllustrativeLevels, "Illustrative #01"
+
+#####
+#   ###
+#     #
+# # # #
+# # # #
+#+$ # #
+#     #
+#######
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Best Solution 5/1
+drruL
+
+Solution 23/9
+RdrUUUdddrruuuulLLulDDD
+
+
+IllustrativeLevels, "Illustrative #02"
+
+  ####
+  #  #
+###  #
+#+*$ #
+#   ##
+#####
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Best Solution 14/4 (YASO 2.142 Optimizer)
+drrULrruulDrdL
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:00
+Optimizer date: 2020-06-10  22:56:58
+Optimizer metrics: Pushes, moves
+
+Solution 16/4
+drrULdruruulDrdL
+
+
+IllustrativeLevels, "Illustrative #03"
+
+######
+#.+$ #
+#$*  #
+#    #
+##  ##
+ ####
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Best Solution 12/4
+DrruLdddlUlU
+
+SaveGame 15/4
+DrddlUlUdrrruuL
+
+
+IllustrativeLevels, "Illustrative #04"
+
+       ####
+########  ##
+#          ###
+# @$$ ##   ..#
+# $$   ##  ..#
+#         ####
+###########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Best Solution 110/46 (YASO 2.142 Optimizer)
+lddrUUluRRRRRRRurDldRRRlllullllllddRRlUluRRRRRRurDldRurDldRRlldllllluU
+luRRRRRurDldRurDldRldllllUUluRRRRurDldRR
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:01
+Optimizer date: 2020-06-10  13:41:21
+Optimizer metrics: Pushes, moves
+
+Solution 112/48
+lddrUUluRRRRRRRurDldRRRllddllllluLUluRRRRRRurDldRurDldRRlldlllllllUUlu
+RRRRRRRurDldRurDldRldllllluUluRRRRRurDldRR
+
+Solution 114/48
+lddrUUluRRRRRRRurDldRurDldRRlldllllluLdlUUluRRRRRRRurDldRRRllddllllllu
+UluRRRRRRurDldRurDldRldllllluUluRRRRRurDldRR
+
+
+IllustrativeLevels, "Illustrative #05"
+
+      #####
+  #####   #####
+  #           #
+  #  ### ###  #
+#### #     # ####
+#    #  *  #    #
+# $  # *+*      #
+#    #  *  #    #
+#### #     # ####
+  #  ### ###  #
+  #           #
+  #####   #####
+      #####
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Best Solution 50/16 (YASO 2.142 Optimizer)
+UrrdrruuuulllldDDuuulllldddllldRRdrUUUUluRRRRurDDD
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:09
+Optimizer date: 2020-06-10  13:51:14
+Optimizer metrics: Pushes, moves
+
+Solution 54/16
+RuulDuuurrrrddddlLuulluulllldddllldRRdrUUUUluRRRRurDDD
+
+Solution 98/26
+RRRRRdrruLLLLLLuuluulllldddddllluRRurDDDDldRRRRdrUUdrrrruuuullluullldd
+drRlluuurrrrddrrddddlllluUrU
+
+Solution 50/16 (YASO 2.142 Optimizer)
+UrrdrruuuulllldDDuuulllldddllldRRdrUUUUluRRRRurDDD
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:11
+Optimizer date: 2020-06-10  14:12:14
+Optimizer metrics: Pushes, moves
+
+
+IllustrativeLevels, "Illustrative #06"
+
+#########
+#       ##
+#        #
+# +* #   #
+#  **   ##
+#   **$ #
+#     # #
+#    #  #
+####   ##
+   #####
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Solution/Moves 46/10
+urrdLDlddrUUlluurrrrrddlLDlddrUrUdlddrruruuLuL
+
+Solution/Pushes 54/6 (YASO 2.142 Optimizer)
+urrdLulldddrrUlluurrrrrddlLuulllddddrrrrUdlddrruruuLuL
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:00
+Optimizer date: 2020-06-10  14:12:39
+Optimizer metrics: Pushes, moves
+
+Solution 85/20
+urrdLulldddrrUlluurrrrrddlLuulllddddrrrrURuLddlluRllluuurDDldRRddrdrru
+ruUUUruLLLLLulD
+
+Solution 93/22
+urrdLDuurrrddlLuulllddddrrrrURldlddrruruUUUruLLLLulDrddLDRRluuurrddLrr
+dLrddldllulluRdrUllluuR
+
+Solution 95/26
+urrdLDlUrrurrddlLLulldddrrrUUddrURlldddrruruUUUruLLLLDDDrruLruulldllld
+drRRlddrUllluuRurruulDulD
+
+
+IllustrativeLevels, "Illustrative #07"
+
+ ###### #####
+##.   ###   #
+#+*     *   #
+##  ####** ##
+ ####  $ *  #
+    # ##    #
+    #  ##   #
+    # # $ ###
+    #   # #
+    ##    #
+     ###  #
+       ####
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Solution/Moves 105/34 (YASO 2.142 Optimizer)
+RdrUruLdrrrrRRurrdLLLLLLLLLrrrrrrrrdddlluUdRdrUULuLLLLLLrrrrrrurrdLLdd
+dddddlluuRlddrruUUUUdddlldlluuuurRR
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:08
+Optimizer date: 2020-06-10  16:55:54
+Optimizer metrics: Moves, pushes
+
+Solution/Pushes 115/30
+RurrdLdlUrrrrrRRurrdLLLLLLLLLrrrrrrrrdddlluUddrruuulLLLLLLrrrrrrrdLrdd
+lluUddrUdddddlluuRldlluuuurRllddddrrdrruUUUlU
+
+SaveGame 121/32
+RurrdLdlUrrrrrRRurrdLLLLLLLLLrrrrrrrrdddlluURuLLLLLLrrrrrdddrruUluurrd
+LLdrddlUdddddlluuRlddrruUlldlluuuurRllddddrrurrUUlU
+
+Solution 113/34
+RurrdLLrrrrrRRurrdLLLLLLLLdlUrrrrrrrrdddlluUddrruuLuLLLLLLrrrrrrrdddlU
+UruLdddddddlluuRldlluuuurRRdrUddDllddrrUUUU
+
+Solution 139/34
+RurrdLLrrrrrRRurrdLLLLLLLLdlUrrrrrrrrdddlluURuLLLLLLrrrrrdddrddddlllul
+uuuurRllddddrrdrruuuulUUddrruUluurrdLulDrdLrddlUllllddddrruRlddrruUUU
+
+Solution 163/36
+RurrdLrrrrRRurrdLLLLLLulldLurrrdLLdlUrrrrrrrrdddlluUdLrdrruLruulLLLLLL
+rrrrrrrdddllUUdrruLddddddlluuRldlluuuuRRRlllddddrrdrruUUdddllluluuuurr
+rRllllddddrrurruUUdrruL
+
+
+IllustrativeLevels, "Illustrative #08"
+
+  ######
+ ##    #####
+ #     #   #
+ # ****    #
+ #    ##  ##
+ #     # ##
+ # ##### #
+ #     # ##
+##     #  #
+#  ***+#$ #
+#      #  #
+###########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The idea is that these levels be as easy as possible. One
+may restart a level, but that should never be necessary. Deadlock
+situations are impossible in these levels.
+
+Best Solution 91/32 (YASO 2.142 Optimizer)
+dlllUluuuuuuurDDrdLulDDDDRRRurDlllddlluRuuuuurrrURRRurrdLLLLuLLulDrrrd
+rrdddddrddlUUUUUUruLL
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:09
+Optimizer date: 2020-06-10  17:24:37
+Optimizer metrics: Pushes, moves
+
+SaveGame 97/32
+dlllUluRRRurDlllluuuuuurrDDrdLLulDDDDrddlluRuuuuurrrUluurrdLulDrdRRRur
+rdLLLLrrdddddrddlUUUUUUruLL
+
+Solution 95/32
+dlllUluRRRurDlllluuuuuurDDrdLulDDDDrddlluRuuuuurrrULuurrdLulDrdRRRurrd
+LLLLrrdddddrddlUUUUUUruLL
+
+Solution 97/32
+dlllUluRRRurDulllluuuuurrDDrdLLulDDDDrddlluRuuuuurrrUluurrdLulDrdRRRur
+rdLLLLrrdddddrddlUUUUUUruLL
+
+Solution 137/40
+dlUdlUdlUrrruulDrddlluRuulDrddlluRuulDldRluuuuuuurDDrdLulDDDDrddlluRuu
+uuurrUdrUlluurDDrdLdlUruuurrdLulDrdRRRurrdLLLLrrdddddrddlUUUUUUruLL
+
+
+IllustrativeLevels, "Illustrative #09"
+
+####
+#  ####
+#     #
+# +** #
+#     #
+### ###
+ #    #
+##    #
+# ***##
+#    #
+### ####
+#      #
+#    # #
+# ***$ #
+#    ###
+######
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Best Solution 81/27 (YASO 2.142 Optimizer)
+drUdrruulLdlluurDrdddddDDDDlldddrUUddrrULUUUUUUUUUdddddddrrrddLLdllluu
+uRdrUUUddrD
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:11
+Optimizer date: 2020-06-10  17:42:50
+Optimizer metrics: Pushes, moves
+
+SaveGame 127/33
+drdddDDDDuuuuuuuUdrruulLdlluurDrdddddddlluRdrUUUUUdddddddrdLulldddrrUU
+UUUUluurrdLulDrddddllddRdrUUUUUddlDrddrUluurrrddLLrruullD
+
+Solution 97/29
+drUdrruulLdlluurDrdddddDDDDrdLulldddrrUUUUUUUUUUddddddddddlluRdrUUUUUd
+ddddrUluurrrddLLrruullDlulD
+
+Solution 139/37
+drdddDDDDuuuuuuuUdrruLLruLddlluRRlluurDrdddddddlluRdrUUUUUdddddddrdLul
+ldddrrUUUUUUluurrdLulDrddddllddRdrUUUUUdddddrUluurrrddLLdllluuurDrurD
+
+Solution 267/73
+drdddDDDDuuuuuuuluurDDDDuurruLLulldRRdddldDrUUUUluurDurrdLLDDDlddrUUUU
+UdlluRdrruuLrddlluRlluurDrdddddddrUluurrdLddluUUUUdddddddrdLulldddrrUU
+UUUruulldRlldRurDDDlldddrruUUUUUluurrdLulDrddddllddRUluRdrUUUdddlddrUd
+luuurrdLulDlddrrrUluurrrddLLdlUrrruullDurrddlLdllluurRurD
+
+
+IllustrativeLevels, "Illustrative #10"
+
+    #####
+  ###   ####
+  #   $    #
+  # ## ### #
+  # # .  # #
+### #    # #
+#   *   *# #
+#   ** **  #
+####*   *# #
+  #      # #
+  #   +  # #
+  #  #$### #
+  #  #     #
+  ##########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Solution/Moves 61/13
+uruURllulLLdlluRRuuuurrurDDurrrrdddddLrdddddllllUUruulDuuuurD
+
+Solution/Pushes 69/7
+uuuulLLuuuurrurDDurrrrddddddddddllllUdrrrruuuuuuuuuullllllldddddlluRR
+
+Solution 315/91
+uurURllulDLLuuuuurrurDDurrrrdddddLLrrdddddllllUUruulDuuRluurDlldllulld
+RRRRurDlDDrDLulUdlddrUUrrUUluurrdLulDrrDRllulDLLuuuuurrrrrrrdddddLrddd
+ddllllUUruUlDlUUllulldRRRRdrUdrUUUllDurrddlLuurDldRuuUUddddlLLuuuuurru
+rDDDDrruLdllddllulldRRRRuLLrrurrdLLdlluRRlldlluRRRdrUdddlUUluuuuurrrdD
+lDDDlddrruLuuuurrddLrDLLruUlDrdddrU
+
+
+IllustrativeLevels, "Illustrative #11"
+
+######
+#    #
+# ## ###
+#  #   ##
+#  $* . ##
+#  .*$@. #
+#    $$  #
+#  .*$.. #
+#  $* * ##
+#  #   ##
+# ## ###
+#    #
+######
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Best Solution 74/16 (YASO 2.142 Optimizer)
+DuuulluullldddddrrrRDRUlULrRuullDRdddLullldddddrrruurrUdllURuullluuRld
+dddR
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:08
+Optimizer date: 2020-06-10  19:48:21
+Optimizer metrics: Pushes, moves
+
+SaveGame 116/24
+DuuulluullldddddrrrRRurrddlUluulDLUddlluuRRRllldRlluuuurrrdDrddrdLLLul
+ldRdrUdlddlddrrruuruULuRdRluurDldddlUruulllddR
+
+Solution 88/22
+DLLLrrUdlluRRRuulDrddlluRdrUluulDrddlluluRdddlUluRddddlddrrruuruURlLuR
+urDldddlUruulllddR
+
+Solution 100/22
+DLLrULrruulDrddlluRRuulluulllddddrRRRdrUluulDuuullldddrRldddrUdlddlddr
+rruuruURlLuRurDldddlUruulllddR
+
+Solution 128/26
+rddlULLLrrURlLrruulDrddlluRdrUluulDuuullldddrRldDldddddrrruurrUlURddll
+ddllluuuuurrdRRddlULuulluuuuurrrddrddDDullddrRuulllldRldRR
+
+Solution 166/34
+rddlULLLdlddlddrrruurrUlULulullddddddrrruuUruRlddlddllluuurRRRuruUddld
+lllluuurDDldRRluurrRRlULdllluuuuurrrddrDDrddlUrurrdLulDlluRRllLrUdldll
+uuuuurrrdDDuuullldddrRlldR
+
+
+IllustrativeLevels, "Illustrative #12"
+
+   ########
+####      ##
+#  #       #
+#  $$$     #
+#   $.**   #
+###...@...###
+ #   **.$   #
+ #     $$$  #
+ #       #  #
+ ##      ####
+  ########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+Best Solution 91/22 (YASO 2.142 Optimizer)
+lldddrrrUUdllluuruUrrrrdddLuuuuulllDDDLddddrrrrUUdRurrddlUruLdlUdlllll
+uuuruulDDuLDlluRRRurD
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:10
+Optimizer date: 2020-06-10  20:19:43
+Optimizer metrics: Pushes, moves
+
+SaveGame 111/36
+llddrrUdlluurRRUrrddLLullldddrrrUUddrURurrdLLuLDuUruLuulldRRurDDldddld
+drUUUdlllluuruLrUruulDDDuulDDuLDlluRRRurD
+
+Solution 98/24
+rrrdLulllldddrrrrUUruLddRldlluRdrUUrrrddlUruLdlUldlllluuruUddlluRUrDur
+uulDDlLrruulDDDllluurDldRurD
+
+Solution 153/34
+UdrUdlDulDrrurrdLLLLulldddrrrrrUUrrdLulluRlllllddddrrrrruUUddlUUddlUdl
+luRRdrUlllluRluuRdrrurruullllDDldRuuLdlluurDldRurDruurrrrddllLrrruulll
+ldDuurDurDurD
+
+
+IllustrativeLevels, "Illustrative #13"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+
+IllustrativeLevels, "Illustrative #14"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+IllustrativeLevels, "Illustrative #15"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+IllustrativeLevels, "Illustrative #16"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+IllustrativeLevels, "Illustrative #17"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+IllustrativeLevels, "Illustrative #18"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+IllustrativeLevels, "Illustrative #19"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+IllustrativeLevels, "Illustrative #20"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER

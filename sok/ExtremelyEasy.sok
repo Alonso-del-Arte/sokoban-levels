@@ -120,12 +120,12 @@
 ::   position after the last move.                        ::
 ::                                                        ::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-Date Created: 2020-05-16  00:31:33
-Date of Last Change: 2020-05-26  15:30:49
+Date Created: 2020-05-26  14:45:09
+Date of Last Change: 2020-06-10  20:38:50
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 These levels are Copyright (c) by Alonso del Arte
-E-mail: alonso.delarte@gmail.com
+E-mail: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 Collection: ExtremelyEasy
 
@@ -137,7 +137,7 @@ ExtremelyEasy, "Easy #01"
 #####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -163,7 +163,7 @@ ExtremelyEasy, "Easy #02"
 #######
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -186,7 +186,7 @@ ExtremelyEasy, "Easy #03"
 #######
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -198,6 +198,9 @@ situations are impossible in these levels.
 
 Best Solution 5/3
 LrRlU
+
+SaveGame 5/3
+UdLrR
 
 Solution 5/3
 LrRlU
@@ -214,7 +217,7 @@ ExtremelyEasy, "Easy #04"
   ###
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -242,7 +245,7 @@ ExtremelyEasy, "Easy #05"
   ###
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -256,6 +259,9 @@ it's possible to be inefficient.
 Best Solution 6/5
 DRUlLU
 
+SaveGame 7/5
+LUdrDRU
+
 
 ExtremelyEasy, "Easy #06"
 
@@ -268,7 +274,7 @@ ExtremelyEasy, "Easy #06"
    ###
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -295,7 +301,7 @@ ExtremelyEasy, "Easy #07"
       ###
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -324,7 +330,7 @@ ExtremelyEasy, "Easy #08"
 ######
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -354,7 +360,7 @@ ExtremelyEasy, "Easy #09"
      #####
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
@@ -389,7 +395,7 @@ ExtremelyEasy, "Easy #10"
            ###
 
 Author: Alonso del Arte
-Email: alonso.delarte@gmail.com
+Email: sokoban@mail.com
 Original level website: https://github.com/Alonso-del-Arte/
 
 These levels are copyright (c) by Alonso del Arte and may be freely
