@@ -3,7 +3,7 @@
 <SokobanLevels>
   <Title>Extremely Easy</Title>
   <Description>The idea is that these levels be as easy as possible. One may restart a level, but that should never be necessary. Deadlock situations are impossible in these levels.</Description>
-  <Email>alonso.delarte@gmail.com</Email>
+  <Email>sokoban@mail.com</Email>
   <LevelCollection Copyright="Alonso del Arte" MaxWidth="21" MaxHeight="17">
     <Level Id="Easy #1" Width="5" Height="3">
       <L>#####</L>

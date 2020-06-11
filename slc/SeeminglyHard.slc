@@ -3,7 +3,7 @@
 <SokobanLevels>
   <Title>Seemingly Hard</Title>
   <Description>These levels may seem difficult, but they are actually quite easy if one stops for a little bit to ponder the puzzle before making the first move. Otherwise it may be necessary to restart the level to recover from a deadlock situation.</Description>
-  <Email>alonso.delarte@gmail.com</Email>
+  <Email>sokoban@mail.com</Email>
   <LevelCollection Copyright="Alonso del Arte" MaxWidth="32" MaxHeight="15">
     <Level Id="Hard #1" Width="13" Height="9">
       <L> ###  ####</L>
