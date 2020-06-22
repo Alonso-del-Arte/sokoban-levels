@@ -121,7 +121,7 @@
 ::                                                        ::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Date Created: 2020-06-10  12:16:45
-Date of Last Change: 2020-06-10  23:15:18
+Date of Last Change: 2020-06-22  03:30:39
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 These levels are Copyright (c) by Alonso del Arte
@@ -155,6 +155,9 @@ levels, or situations that sometimes arise in the course of trying to solve a
 Sokoban level.
 
 Best Solution 5/1
+drruL
+
+Solution 5/1
 drruL
 
 Solution 23/9
@@ -221,7 +224,7 @@ Best Solution 12/4
 DrruLdddlUlU
 
 SaveGame 15/4
-DrddlUlUdrrruuL
+DrddlUlUdrruruL
 
 
 IllustrativeLevels, "Illustrative #04"
@@ -264,6 +267,14 @@ Solution 114/48
 lddrUUluRRRRRRRurDldRurDldRRlldllllluLdlUUluRRRRRRRurDldRRRllddllllllu
 UluRRRRRRurDldRurDldRldllllluUluRRRRRurDldRR
 
+Solution 116/48
+lddrUUluRRRRRRRurDldRRRllddllllluLUluRRRRRRurDldRurDldRRlldllllluUluRR
+RRRurDldRurDldRldlllllllluRRRdrUUluRRRRurDldRR
+
+Solution 118/48
+lddrrruULuRRRRRurDldRRRlllullllllldRRRdrUluRRRRurDldRurDldRRlldlllllll
+UUluRRRRRRRurDldRurDldRldllllllUUluRRRRRRurDldRR
+
 
 IllustrativeLevels, "Illustrative #05"
 
@@ -301,6 +312,9 @@ Optimizer: YASO 2.142
 Optimizer time: 00:00:09
 Optimizer date: 2020-06-10  13:51:14
 Optimizer metrics: Pushes, moves
+
+Solution 52/16
+RuulDuuulllldddddllUluRRdrUUUluRRRRurDDDuurrrrddddlL
 
 Solution 54/16
 RuulDuuurrrrddddlLuulluulllldddllldRRdrUUUUluRRRRurDDD
@@ -355,6 +369,13 @@ Optimizer time: 00:00:00
 Optimizer date: 2020-06-10  14:12:39
 Optimizer metrics: Pushes, moves
 
+Solution 50/10
+urrdLullddrdrdrrULUUluurrdLulDlldddrRdrddrruruuLuL
+
+Solution 80/18
+dddrrrULrRllLdlUUluurrrdDuurrddLddlluRllluuurrrdDuullldddddrrrdrruruUU
+UruLLLulDD
+
 Solution 85/20
 urrdLulldddrrUlluurrrrrddlLuulllddddrrrrURuLddlluRllluuurDDldRRddrdrru
 ruUUUruLLLLLulD
@@ -405,13 +426,13 @@ Optimizer time: 00:00:08
 Optimizer date: 2020-06-10  16:55:54
 Optimizer metrics: Moves, pushes
 
-Solution/Pushes 115/30
+Solution/Pushes 113/30
+RurrdLLrrrrrRRurrdLLLLLLLLdlUrrrrrrrrdddlluUddrruuulLLLLLLrrrrrrrdLrdd
+lUlUddrddddlluuRldlluuuurRllddddrrdrruUUUlU
+
+Solution 115/30
 RurrdLdlUrrrrrRRurrdLLLLLLLLLrrrrrrrrdddlluUddrruuulLLLLLLrrrrrrrdLrdd
 lluUddrUdddddlluuRldlluuuurRllddddrrdrruUUUlU
-
-SaveGame 121/32
-RurrdLdlUrrrrrRRurrdLLLLLLLLLrrrrrrrrdddlluURuLLLLLLrrrrrdddrruUluurrd
-LLdrddlUdddddlluuRlddrruUlldlluuuurRllddddrrurrUUlU
 
 Solution 113/34
 RurrdLLrrrrrRRurrdLLLLLLLLdlUrrrrrrrrdddlluUddrruuLuLLLLLLrrrrrrrdddlU
@@ -465,6 +486,10 @@ Optimizer metrics: Pushes, moves
 SaveGame 97/32
 dlllUluRRRurDlllluuuuuurrDDrdLLulDDDDrddlluRuuuuurrrUluurrdLulDrdRRRur
 rdLLLLrrdddddrddlUUUUUUruLL
+
+Solution 93/32
+dlllUluRRRurDlllluuuuuurrDDrdLLulDDDDrddlluRuuuuurrrURRRurrdLLLLLruulD
+rdrrdddddrddlUUUUUUruLL
 
 Solution 95/32
 dlllUluRRRurDlllluuuuuurDDrdLulDDDDrddlluRuuuuurrrULuurrdLulDrdRRRurrd
@@ -520,10 +545,6 @@ Optimizer time: 00:00:11
 Optimizer date: 2020-06-10  17:42:50
 Optimizer metrics: Pushes, moves
 
-SaveGame 127/33
-drdddDDDDuuuuuuuUdrruulLdlluurDrdddddddlluRdrUUUUUdddddddrdLulldddrrUU
-UUUUluurrdLulDrddddllddRdrUUUUUddlDrddrUluurrrddLLrruullD
-
 Solution 97/29
 drUdrruulLdlluurDrdddddDDDDrdLulldddrrUUUUUUUUUUddddddddddlluRdrUUUUUd
 ddddrUluurrrddLLrruullDlulD
@@ -569,11 +590,18 @@ facts about Sokoban, or certain arrangements of initial state in Sokoban
 levels, or situations that sometimes arise in the course of trying to solve a
 Sokoban level.
 
-Solution/Moves 61/13
+Best Solution 43/7
+uuuulLLdlluRRuuuurrurDDurrrrddddddddddllllU
+
+Solution 69/7
+uuuulLLuuuurrurDDurrrrddddddddddllllUdrrrruuuuuuuuuullllllldddddlluRR
+
+Solution 61/13
 uruURllulLLdlluRRuuuurrurDDurrrrdddddLrdddddllllUUruulDuuuurD
 
-Solution/Pushes 69/7
-uuuulLLuuuurrurDDurrrrddddddddddllllUdrrrruuuuuuuuuullllllldddddlluRR
+Solution 119/11
+luuULLuuuuurrurDDurrrrddddddddddllllUUluuruuulDrddlddrddrrrruuuuuuuuuu
+lllllllddddlldRRuuuuurrrrrrrddddddddddlllluuluurD
 
 Solution 315/91
 uurURllulDLLuuuuurrurDDurrrrdddddLLrrdddddllllUUruulDuuRluurDlldllulld
@@ -621,9 +649,9 @@ Optimizer time: 00:00:08
 Optimizer date: 2020-06-10  19:48:21
 Optimizer metrics: Pushes, moves
 
-SaveGame 116/24
-DuuulluullldddddrrrRRurrddlUluulDLUddlluuRRRllldRlluuuurrrdDrddrdLLLul
-ldRdrUdlddlddrrruuruULuRdRluurDldddlUruulllddR
+Solution 128/18
+rddlUruululluulllddddrrdrRRUrDlllllluuuuurrrddrdDLruulDuuullldddrRlddr
+rRDLrrUluRdlllldddlddrrruurUdlddllluuuuurrrdRddlUruulllddR
 
 Solution 88/22
 DLLLrrUdlluRRRuulDrddlluRdrUluulDrddlluluRdddlUluRddddlddrrruuruURlLuR
@@ -632,6 +660,10 @@ urDldddlUruulllddR
 Solution 100/22
 DLLrULrruulDrddlluRRuulluulllddddrRRRdrUluulDuuullldddrRldddrUdlddlddr
 rruuruURlLuRurDldddlUruulllddR
+
+Solution 124/26
+rddlUUdLLLuluuluurrrddrdDLruulDuuullldddrRldDDurrRRdrUlllllldddddrrruu
+rrUlURddllddllluuuuurrrRurDDullldRRddlUdddllluurUluRdR
 
 Solution 128/26
 rddlULLLrrURlLrruulDrddlluRdrUluulDuuullldddrRldDldddddrrruurrUlURddll
@@ -664,7 +696,11 @@ Original level website: https://github.com/Alonso-del-Arte/
 These levels are copyright (c) by Alonso del Arte and may be freely
 distributed for non-commercial use.
 
-Author's note: PLACEHOLDER
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
 
 Best Solution 91/22 (YASO 2.142 Optimizer)
 lldddrrrUUdllluuruUrrrrdddLuuuuulllDDDLddddrrrrUUdRurrddlUruLdlUdlllll
@@ -675,13 +711,17 @@ Optimizer time: 00:00:10
 Optimizer date: 2020-06-10  20:19:43
 Optimizer metrics: Pushes, moves
 
-SaveGame 111/36
-llddrrUdlluurRRUrrddLLullldddrrrUUddrURurrdLLuLDuUruLuulldRRurDDldddld
-drUUUdlllluuruLrUruulDDDuulDDuLDlluRRRurD
-
 Solution 98/24
 rrrdLulllldddrrrrUUruLddRldlluRdrUUrrrddlUruLdlUldlllluuruUddlluRUrDur
 uulDDlLrruulDDDllluurDldRurD
+
+Solution 103/26
+rrrdLullllluRdrrrruuullllDDldRuuLdlluurDldRurDruurrdLulDDDDlddrUUddrrr
+rUUruLddRurrddlUruLdlUdldlluRdrUU
+
+Solution 97/32
+lldddrrrUUdllluuluRURuulDDDldRuuurrrrrddddLDlddrUUUrrdLLLLLLdlUUruuurR
+RRurDDullllldlluRRurrdLulDD
 
 Solution 153/34
 UdrUdlDulDrrurrdLLLLulldddrrrrrUUrrdLulluRlllllddddrrrrruUUddlUUddlUdl
@@ -691,13 +731,15 @@ ldDuurDurDurD
 
 IllustrativeLevels, "Illustrative #13"
 
-########
-########
-## +$ ##
-## ## ##
-##    ##
-########
-########
+#########
+#       #
+# $. .$ #
+# **$*. #
+#  $+$  #
+#  *$*. #
+# *. .$ #
+#       #
+#########
 
 Author: Alonso del Arte
 Email: sokoban@mail.com
@@ -712,16 +754,47 @@ facts about Sokoban, or certain arrangements of initial state in Sokoban
 levels, or situations that sometimes arise in the course of trying to solve a
 Sokoban level.
 
+Best Solution 44/14 (YASO 2.142 Optimizer)
+RDrUllLDRddrrUruuuuLulldDulDDuuulldRldRlddrU
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:12
+Optimizer date: 2020-06-21  16:36:55
+Optimizer metrics: Moves, pushes
+
+Solution 86/18
+RDrUdrddlUruulllDurrrdddllULuurDurruuulldDDuuulllldddrRRUruurrdddlLrru
+uLulDulldRlulldR
+
+Solution 77/20
+LDurRlURuurrdLrdLrddlUlDulldRRlddrUdrruLruuuuulllldDDuuulldRldRlddrUlu
+uurrrDD
+
+Solution 108/22
+DLruRlLrUddldRdrrruulUrdddlUruuuuLullDDuullldRldddRlddrrruuUlDlluRluur
+DDldRlddrrruuuLrrrruuullldDuulllddddrU
+
+Solution 150/28
+LDllddrrrrrruuulLDrrddlllllluurrRRurrdLrddlUdllllluuuuuRRRlDDuulldRldd
+rUrUdRllluuurrrdDuurrrddlLLDurrrdddlUUruLruullldddRlllldddrrruUddrruur
+uulDuruulD
+
 
 IllustrativeLevels, "Illustrative #14"
 
-########
-########
-## +$ ##
-## ## ##
-##    ##
-########
-########
+  ########
+ ##      #
+ #       ###
+##         #
+#   #$$    #
+# $$  $$   #
+## $$  $$ ##
+ #  $$  $$#
+ ## .#.#. ##
+ # . . . . #
+ #  . + .  #
+ ##. . . .##
+  #########
 
 Author: Alonso del Arte
 Email: sokoban@mail.com
@@ -730,18 +803,80 @@ Original level website: https://github.com/Alonso-del-Arte/
 These levels are copyright (c) by Alonso del Arte and may be freely
 distributed for non-commercial use.
 
-Author's note: PLACEHOLDER
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Solution/Moves 209/91 (YASO 2.142 Optimizer)
+rrruuULUUrDDDDrdLLLuluuuRRuruulDDDDDDDrdLuuuuLruuulDDlDRurDDuuurDDDDDu
+LuuullluRRuulDDldRRuRurDDDDuuulDDDDuuuuuulllllldDRDDDDldRRurDlluuuuuRR
+RRurDDDulllLDDuuulDDDDDuRuuurrdLulDDDluuuuuurrDDDrdLulDllUUluRurDDDDD
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:11
+Optimizer date: 2020-06-21  17:07:33
+Optimizer metrics: Moves, pushes
+
+Solution/Pushes 211/75 (YASO 2.142 Optimizer)
+llluuuluURDDDDldRRurDruuuulLDDDrruuLulDDulluurDDDDDuRluuuulluRurDDldRu
+uurrDDDuLDDlluuurDDDDurRurDDDuuuluuurrrrdddDDDDullluuuluuRDRlDDrRlluur
+DluuurDrrddDDDrdLLulDrruuuuuullDRDDDrdLuuuulldRurDDDDuuulldRurDuuurDDD
+D
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:13
+Optimizer date: 2020-06-21  18:07:16
+Optimizer metrics: Pushes, moves
+
+Solution 215/75
+llluuuluURDDDDDrrruuuulLDDDldRurDuruuLulDDldRuulluurDDDDldRuuuuuuulDld
+RurDDldRurDuruLdlluurDDDDuuuuurrDRDDDDDuuulluRurDDDuuuurrrdddDDDDuuuLr
+uulDDDDrdLulDruuuuuuulldddRRlldRurDDrdLuuuurDDDuullluuRurDDDDDDuuulluR
+urDDD
+
+Solution 259/79
+lluululuURDDuRDDDDldRuuuulDDDrrruuuuLLdlluurDrrrdLulDDldRuuulDDDldRuuu
+uuuurrDDDrdLLulDDuuuuulDldRurDRlDldRurDuuluurrdRlDDldRurDDDuuuluurDDDu
+uuurrrdddDDDDuuuuuuulllddRlddrRlluurDuluurDrrddDDDrdLLulDrruuuuuullldd
+rRlluurDurDDDDrdLuuuurDDDuuullldRurDDDDuuulldRurD
+
+Solution 229/89
+rrruuUUUluurDDDDDDrdLLLurruuLruulDDDDDrdLuulluuuRRurDDDDDuuulLulDrruuu
+lDDldRurDDrdLuuullluRRurDDDDDuuuuuullDDldRRRurDDDuuuulllulllldDRDDDDld
+RRurDlluuuuuRRRRurDDDulllLulDDDDDuuuurDDldRuuurrdLulDDDuuuurruulDDDrdL
+ulDllUruulldRurDDDD
+
+Solution 245/83
+llluuuluURDDDDDrrruuuulLDDDldRurDuruuLulDDDuulluurDDDuuuuulDldRurDDldR
+urDuluuurrrrrrdddDDlddrruLLLLrrruuLLrruulDDDDDrdLuuuuuuuullllldddrrrDD
+DrruuuuulullDDDldRurDuRRurDDDDDuuuuuullDDldRurDDrdLuuullluRRurDDDDDuul
+lllluuRRRRRurDDDDuuuuulllDDDldRRurD
+
+Solution 263/83
+uuuuluUUrrrrdddDDDDllluuurRlluluuurrrrdddDDDrdLLulDrruuuuulDDDDrdLLulu
+uuRdrruulDDDrdLuuuuulDDldRRurDDuulllluRRurDDDDDuuuullluRRurDDDDllddlll
+uuluURDDDDDurrruuulLruuullddDDDrddlluRurDldRurDlluuuurDDDuuRurDuulLruu
+lldDDldRurDDldRluuuuuulDldRurDDDDuuuuuuurrDDDDDrdLulD
 
 
 IllustrativeLevels, "Illustrative #15"
 
-########
-########
-## +$ ##
-## ## ##
-##    ##
-########
-########
+######## ####  ####
+#   #  ###  ####  #####
+# #   *   *+  # *  #  #
+#    ** #  *    **    #
+#####  ##   #  # $   ##
+    #   #######  ##  #
+ ####  ##  # #    # ##
+ #   **      #  # ###
+ #   *    ***     #
+ ##   ##     ######
+  ###  #   ###
+    #  ## ##
+    #     #
+    #######
 
 Author: Alonso del Arte
 Email: sokoban@mail.com
@@ -750,18 +885,99 @@ Original level website: https://github.com/Alonso-del-Arte/
 These levels are copyright (c) by Alonso del Arte and may be freely
 distributed for non-commercial use.
 
-Author's note: PLACEHOLDER
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Solution/Moves 152/50
+rdLdlluRdrUllullLLDDulluRRddrddlUUrddDLLddrUluRldlluRRdrRRurrdLLLrrrdr
+rURuLddlluRluurDrrdRRururrddlLLLrruuuruRRuulDLLLLLrrrrdRurrrddlUruLLLd
+RurrddlUruLL
+
+Solution/Pushes 160/42 (YASO 2.142 Optimizer)
+rdLdlluRdrUllullLLDlluRRdDrddlUUrddDrrrdddddlllluuuluuRlddrUddddrrrruu
+urrURuLddlllulLrrrRluurDrrdRRuurrrddlLLLrruuuruRRuulDLLLLLrrrrdRurrrdd
+lUruLLLdRurrddlUruLL
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:12
+Optimizer date: 2020-06-21  23:10:55
+Optimizer metrics: Pushes, moves
+
+SaveGame 190/54
+rrdrruRDRRllllllululDlddrUdrUrrrrrrrdrruLLLLLLLLrrrrDurruLdlllllLdlluR
+lullLLDlluRRdDrddlUUddrDLLddrUluRldlluRRddrdddrrrruuuullLrrrdrrURRRRll
+luLddlluRluurDrrdrrruurrddLLLLrruurUURRurrddlUruLL
+
+Solution 154/50
+ulDlddrrUdlUlullLLDDulluRRddrddlUUrddDLLddrUluRldlluRRdrRRurrdLLLrrrdr
+rURuLddlluRluurDrrdRRururrddlLLLrruuruuRRuulDLdRulLLLLrrrrrrrrddlUruLL
+LdRurrddlUruLL
+
+Solution 170/54
+ulDlddrUdrUllullLLDDrUluLdllluurrDullddrRRRdrddlUUddrDLLddrUluRldlluRR
+drRRurrdLLLrrrdrrURuLddlluRluurDrrdRRururrddlLLLrruuruuRRuulDLdRluLLLL
+rrrrrrrrddlUruLLLdRurrddlUruLL
+
+Solution 178/56
+ulDlddrrUdlUlullLLLdllluurrDrrDDrUllulullddrRRRdrddlUUddrDLLddrUluRldl
+luRRdrRRurrdLLLrrrdrrURRRRllluLddlluRluurDrrdrrruurrddLLLLrruuuruRRuul
+DLLLLLrrrrdRurrrddlUruLLLdRurrddlUruLL
+
+Solution 190/58
+ulDlddrrUdlUlullLLLrDDrUllllluurrDullddrRRRdrddlUUddrDLLddrUluRldlluRR
+drRRurrdLLLrrrdrUdrURRRRlllllluurDlddrrruuLddlluRluurDrrdrrruurrddLLLL
+rruuuruRRuulDLLLLLrrrrdRurrrddlUruLLLdRurrddlUruLL
+
+Solution 214/72
+ulDlddrrUdlUlullLLLrDDrUllllluurrDullddrRRRdrddlUUddrDLLddrUluRldlluRR
+drRRurrdLLLrrrdrUdrURRRururrddlLLLLLLLuurDldRRRRRRllluLdlluurDldRullld
+RRurrrdrrruurrddLLLLrruuuruRRuulDLdRluLLLLrrrrrurdrrddlUruLLLdRurrddlU
+ruLL
+
+Solution 216/70
+ulDlddrUdrUllullLLLrDDrUllllluurrDullddrRRRdrddlUUddrDLLddrUluRldlluRR
+drddddrrrruuuullLrrrdrUdrURRRRuurrddLLLLLLLLuurDldRRRRRRllluLdlluurDld
+RlulldRRurrrdrrruurrddLLLLrruuuruRRuulDLLLLLrrrrdRurrrddlUruLLLdRurrdd
+lUruLL
+
+Solution 264/78
+ulDlddrUdrUllullLLLrDDrUllllluurrDullddrRRRdrddlUUddrDLLrDDDuuRurrdLLr
+rddrddllluuluUluRldlluRRddrdrddlUUUdddrrrruuurrUdlUrRRRRuurrddLLLLLLLd
+lluururDllddrrruruLddllluurDRRRRRRlllllluurDldRllddrUluRurrrdrruurrrdd
+LLLLrruuuruRRuulDLLLLLrrrrdRurrrddlUruLLLdRurrddlUruLL
+
+Solution 244/80
+ulDlddrUdrUllullLLLrDDrUllllluurrDullddrRRRdrddlUUddrDLLrDRRllllluRRRd
+DDrddlUUUUddddrrrruuuuLLLrrrdrUdrURRRRuurrddLLLLLLLdlluururDllddrrrruu
+LddllluurDRRRRRRlllllluurDldRddlUluRurrrdrrruurrddLLLLrruuuruRRuulDLLL
+LLrrrrdRurrrddlUruLLLdRurrddlUruLL
+
+Solution 190/54
+rrdrruRDRRllllllululDlddrUdrUrrrrrrrdrruLLLLLLLLrrrrDurruLdlllllLdlluR
+lullLLDlluRRdDrddlUUddrDLLddrUluRldlluRRddrdddrrrruuuullLrrrdrrURRRRll
+luLddlluRluurDrrdrrruurrddLLLLrruurUURRurrddlUruLL
 
 
 IllustrativeLevels, "Illustrative #16"
 
-########
-########
-## +$ ##
-## ## ##
-##    ##
-########
-########
+#####
+#   ##
+# *. #
+# ** #
+#  $ ####
+#   #   ##
+# *.  *. #
+# **  ** #
+#  $   $ #
+##   #  ##
+ #### *+ #
+    # ** #
+    #  $ #
+    ##   #
+     #####
 
 Author: Alonso del Arte
 Email: sokoban@mail.com
@@ -770,18 +986,57 @@ Original level website: https://github.com/Alonso-del-Arte/
 These levels are copyright (c) by Alonso del Arte and may be freely
 distributed for non-commercial use.
 
-Author's note: PLACEHOLDER
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Best Solution 93/20 (YASO 2.142 Optimizer)
+rdddlluluuRuuluuurrdrddLULLullulluuuurrdrddLUddlluRdrUllddddrRURRdLdlU
+rrRdrUlddlddrUddrruLdlU
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:11
+Optimizer date: 2020-06-21  20:59:09
+Optimizer metrics: Pushes, moves
+
+Solution 107/22
+rdddlluluuRuulluulululuuurrdrddLUddlluRdrUdlldRlddrUddrruLdlUrrruuurrd
+rddLUdLLLdlluRRRRdrUdldlddrUddrruLdlU
+
+Solution 111/22
+ululluululluuuurrdrddLUddlluRdrUdlldRlddrUddrruLdlUrrruuurrdrddLLLrrUd
+llLdlluRRRRdrUddrdddlluluuRlddrUddrruLdlU
+
+Solution 120/24
+ululuullululuuurrdrddLUddlluuRlddrUdldRlddrUddrruuLrddlUrruuurrdrddLUL
+rdLLLuRdldlluRRRRdrUddrdddlluluuRlddrUddrruuLrddlU
+
+Solution 227/48
+rdddlluluuRlddrUddrruuLUrdddlluluuRuuluuurrdLulDlddrrUdlluururrdrddLUd
+LuLullulldddrdrruRRllUdrrullddlluRdrUruuLrddrurrdLLddlddrdrUruuLUluurD
+DulLLdlluRRRRdrUlluulDrdLdlluRRurrdrruLdlLLdlluRRRRdrUlllllluuuuuuurrd
+rddLUddlluuRlddrU
 
 
 IllustrativeLevels, "Illustrative #17"
 
-########
-########
-## +$ ##
-## ## ##
-##    ##
-########
-########
+####   ####
+#  #####  #
+#         #
+#  ## ### ####
+## #.$  # #  #
+ # #.*$  $*. #
+ # # .$ $*.  #
+ #  $  +     #
+ # # .$ $*.  #
+ # #.*$  $*. #
+## #.$  # #  #
+#  ## ### ####
+#         #
+#  #####  #
+####   ####
 
 Author: Alonso del Arte
 Email: sokoban@mail.com
@@ -790,7 +1045,39 @@ Original level website: https://github.com/Alonso-del-Arte/
 These levels are copyright (c) by Alonso del Arte and may be freely
 distributed for non-commercial use.
 
-Author's note: PLACEHOLDER
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+Best Solution 105/31 (YASO 2.142 Optimizer)
+uLruulLrDLrrrDRRdrUlllldRRllddrURRUrDllllulUruLuluurrrrddDldDldRRllddl
+LUdddrrrruuUllLLdddllluuuuurRRRDrdL
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:11
+Optimizer date: 2020-06-21  15:44:02
+Optimizer metrics: Pushes, moves
+
+Solution 128/31
+uLruulLrDLrrddlUruLrrDRRdrUlllluulluurrrrddDldRlldRRRdrruulDDullllddrU
+RlUluRdddldlLUdrruLLrruulDrdLdlddllluuuuurRRRdddlddrrrruuU
+
+Solution 142/31
+ddrUluRRRurDDullldRlluuurDldRRRurrddlUUdllluRlluulLDurrdLLrrddlUruLddr
+dddlLUdrruLLrruulDrdLuuuuuluullldddddrRRRuuuluurrrrddDlddddldllddrrrru
+uU
+
+Solution 194/49
+rURRdrUllllLruulDLruLrrdddlUruLddlLLrrrrdddlLrruuLLulDrrrddlUruLuuuulu
+urrrrddDDrdLLulldddrrURDRluuulDrddlluRlddllddrrrruUddlllluurrurRluuulu
+RlulluurrrrddDldRlllddddlddllluuuuUUUUUluRRRRRRRurDDDD
+
+Solution 198/63
+rURllLruulDLruLrrdddlUruLuluurrrrddDRlDlluRRlllddlLLrrrrdLrddlLrruuurR
+RdrruLLLLDRRurDllllddllddrrrruuUUluurDldRlldRlulLulDrrrddllUdrruLdlddr
+rrruuUluuuulluluulllddddDDDDDlddrUUUUUUUUUUluRRRRRRRurDDDD
 
 
 IllustrativeLevels, "Illustrative #18"
