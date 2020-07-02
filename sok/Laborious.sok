@@ -1,0 +1,797 @@
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::         Sokoban (c) by Falcon Co., Ltd., Japan         ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::                    File Format 0.17                    ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::                                                        ::
+:: File Notes                                  Optional   ::
+:: Puzzle 1                                    Required   ::
+::    Title                                    Optional*  ::
+::    Board                                    See legend ::
+::    Puzzle Notes                             Optional   ::
+::    Saved Game or Solution 1                 Optional   ::
+::      Title                                  Optional*  ::
+::      Moves                                  See legend ::
+::      Notes                                  Optional   ::
+::    Saved Game or Solution 2                 Optional   ::
+::    ... (more saved games and solutions)                ::
+:: Puzzle 2                                    Optional   ::
+:: ... (more puzzles)                                     ::
+::                                                        ::
+:: Remarks:                                               ::
+::                                                        ::
+:: File Notes                                             ::
+::   File notes consist of unstructured text and          ::
+::   key/value properties, such as "Author: Name". Lines  ::
+::   beginning with "::" are comments meant to be read    ::
+::   only by a person examining the file in a text        ::
+::   editor, and should not be displayed by the Sokoban   ::
+::   program.                                             ::
+::                                                        ::
+::   The optional but recommended property                ::
+::   "Collection: Name" assigns a name to the puzzle      ::
+::   collection. When a collection is copied from the     ::
+::   internet, for example, and pasted into a Sokoban     ::
+::   program, this information allows the collection to   ::
+::   be saved with the proper name.                       ::
+::                                                        ::
+:: Titles                                                 ::
+::   A title line is the last non-blank text line before  ::
+::   a board, a saved game, or a solution, provided the   ::
+::   line is preceded  by a blank line or it is the only  ::
+::   text line at this position in the file.              ::
+::                                                        ::
+::   Title lines are optional unless a single or a last   ::
+::   text line from a preceding puzzle, saved game,       ::
+::   solution, or file header can be mistaken for a title ::
+::   line.                                                ::
+::                                                        ::
+:: Puzzle Notes                                           ::
+::   Two special key/value pairs are supported in puzzle  ::
+::   notes: "Title" and "Author", hence, titles can       ::
+::   either come from a title line or from a key/value    ::
+::   pair.                                                ::
+::                                                        ::
+::::::::::::::::::::::::::: Board ::::::::::::::::::::::::::
+:: Legend.................:      :.................Legend ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: Wall...................: #  # :...................Wall ::
+:: Pusher.................: p  @ :.................Pusher ::
+:: Pusher on goal square..: P  + :..Pusher on goal square ::
+:: Box....................: b  $ :....................Box ::
+:: Box on goal square.....: B  * :.....Box on goal square ::
+:: Goal square............: .  . :............Goal square ::
+:: Floor..................:      :..................Floor ::
+:: Floor..................: -  _ :..................Floor ::
+::                                                        ::
+:: Remarks:                                               ::
+::                                                        ::
+::   The first and the last non-empty square in each row  ::
+::   must be a wall or a box on a goal. An empty interior ::
+::   row is written with at least one "-" or "_".         ::
+::                                                        ::
+::   Boards may be run-length encoded (RLE), e.g.,        ::
+::   "###----p.#" may be encoded as "3#4-p.#", and        ::
+::   "#-#-#-##-#-#-#" may be encoded as "2(3(#-)#)".      ::
+::   A row cannot be split over multiple lines.           ::
+::                                                        ::
+::   Rows may be combined on a single line by using "|"   ::
+::   as a row separator, e.g., "--3#|3#-#|#pb.#|5#".      ::
+::   A "|" at the end of a line is optional and may be    ::
+::   omitted.                                             ::
+::                                                        ::
+::::::::::::::::::::::::::: Moves ::::::::::::::::::::::::::
+:: Legend.................:      :.................Legend ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: Move pusher up.........: u  U :.......Push/pull box up ::
+:: Move pusher down.......: d  D :.....Push/pull box down ::
+:: Move pusher left.......: l  L :.....Push/pull box left ::
+:: Move pusher right......: r  R :....Push/pull box right ::
+:: Begin jump.............: [  ] :...............End jump ::
+:: Begin pusher change....: {  } :......End pusher change ::
+:: Current position.......: *  * :.......Current position ::
+::                                                        ::
+:: Remarks:                                               ::
+::                                                        ::
+::   Moves may be run-length encoded, e.g., "3r4U" means  ::
+::   "rrrUUUU", and "2(3(dr)R)" means "drdrdrRdrdrdrR".   ::
+::   Each line must, however, have at least one proper    ::
+::   non-digit character. Spaces between moves are        ::
+::   allowed.                                             ::
+::                                                        ::
+::   Jumps and pulls: Only in reverse mode saved games    ::
+::   and solutions.                                       ::
+::                                                        ::
+::   Reverse mode saved games and solutions must begin    ::
+::   with a jump, even if it is empty. An example:        ::
+::   "[]U[rr]d".                                          ::
+::                                                        ::
+::   Pusher changes: Only in puzzles with multiple        ::
+::   pushers, e.g., Multiban. Moves inside the braces     ::
+::   depict the relative movement to get from the         ::
+::   currently active pusher to the next active pusher.   ::
+::   At game start, a "{...}" sequence activates the      ::
+::   pusher relative to the top-left pusher. An example:  ::
+::   "{rddd}Urr{uul}uLU". If the top-left pusher is the   ::
+::   first active pusher, then the empty "{}" can be      ::
+::   omitted.                                             ::
+::                                                        ::
+::   The current position is optional and defaults to the ::
+::   position after the last move.                        ::
+::                                                        ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Date Created: 2020-07-02  14:53:11
+Date of Last Change: 2020-07-02  18:31:28
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+These levels are Copyright (c) by Alonso del Arte
+E-mail: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+Collection: LaboriousLevels
+
+
+LaboriousLevels, "Laborious #01"
+
+         ####
+ #########  ##
+ #   $       #
+ #  * * * * *##
+## * * * * *  ##
+# * * * * *    #
+#  * * * * *   ###
+##               #
+ ###########     #
+      #          #
+     ##      #   #
+    ##           #
+   ##      #     #
+  ##             #
+ ##      #      ##
+##             ##
+# +    #      ##
+#            ##
+##############
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The idea of these levels is that they're not easy or hard, 
+just time-consuming. There are plenty of opportunities for deadlocks, 
+some subtler than others, but, for the most part, when you figure out a 
+solution, carrying it out will be a lengthy chain of repeated steps.
+
+Best Solution 284/83 (YASO 2.142 Optimizer)
+urrrrrrrrrruuuuuuuulluRurDDDDDDDDDrdLLLLLLLLLulDrdLurrrrrrrrruuuuuuuul
+llluRRRRllluRRRlluUrurDDDuulDDuuuulDDDDlddllllllluUURuurRRRRRRurDldRdd
+llddllluRRdlllluRRRlluULrdddllluurRurDllluRuulDDrdrruLdddrrruuLLrrddrr
+rrrrruuLullluulllllDurrrrrdddlLLddrUdrrULLrrUUrrrdLLrrrddllULLdrrrruLL
+UruL
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:12
+Optimizer date: 2020-07-02  16:18:10
+Optimizer metrics: Pushes, moves
+
+Solution 328/85
+rrrruuuurrrruuurruulluRurDDDDDDDDDrdLLLLLLLLLulDrdLrrrurrrrrruuuuuuuul
+llluRRRRuuLuurDDDuuldddlluRRRuuullldRurDDDuulDDlddllllllluUURuurRRRRRR
+urDldRlddlddllluRRlldlluRRRlluLrULdddlluuRRurDllluRuulDDrdrruLdddrrrrr
+rrrrruuLullluulllllDurrrrrddrrrdrddllllllluuLLrrddrrrrrrruululldllLLdd
+rUdrrUUUddLLrrdrrrruulLLrrrddllUUruLddLLrrdrruLL
+
+Solution 382/123 (YASO 2.142 Optimizer)
+urrrrrrrrrruuuuuuuulluRurDDDDDDDDDrdLLLLLLLLLulDrdLurrrrrrrrruuuuuuuuu
+uuLuurDDDuuullldRRulllldRRRurDDDuullDRDrrrddllllllllllluluRuuurrRRRRRd
+rruulDrdLLulllldDlLrDurrDuluurrrrddlDRRRRurDDDDuuuulLdlUdllllulldRRRRR
+RRRurDDDlllllllllUUrDldlluuRRluulDuurrrddLddrUlddRRRUdRRUdRRUdRddddrru
+uuuuullulllldLLLrrdLurrurrdLLLrrdLdrrrrUULLLddrUUruLdrrruLddrrdLrddLUl
+UdrUULLLrrrrdddddlluUUUruLrruLLL
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:13
+Optimizer date: 2020-07-02  15:58:51
+Optimizer metrics: Pushes, moves
+
+Solution 468/127
+rrrruuuuurrrrrruuuulluRurDDDDDDDDDrdLLLLLLLLLulDrdLrrruuuuurrrrrruuuuu
+uuLuurDDDrdLuuuullldRRllulldRRRurDDrdddlluRdrruuullDuullDRDrrrddllllll
+llllluluRuuurrRRRRRdrruulDllllldDlLrDurrDuluurrrddruurrdLLrddrruLdlUll
+DRRRRurDDDDuuulllllllulldRRRRRRRRurDDDllllllllllluuRRRRRRRRRRurDDullll
+lllllluulDrrrrdrrrrrrrrddddddlluuuullllllllUUruLdddrUUddrrUdrrUdrrUdrd
+dddrruuuuuullulllldLLLrrdLdrrruLuurrdLLLrrrurrdLLLrrdLdlUUddrrrUUruLrd
+drdddLrddlluUUUUruLLrrrddLrddlUUruLLLLrrrddlUruL
+
+Solution 530/153
+urrrrrrrrrruuuuuuuuuulDldRurDDDDDDDDrdLLLLLLLLLulDrdLurrrrrrrrruuuuuuu
+ulllluRRlldlluRRlldlluRRdlllluRRllluRuuurrRRRRRRDrDuluurDrDDuLrdDDDllu
+RdrUUUlDuuulldRlDRDrruLdlUluurrDDlllDurrrrdddllUULrddrruuLuLrdrddlllll
+luLLULUluurDurrdLDuulldRurrrrrrrrdddrddlllllUdrrruUlDLLLrrrrRurDldRurD
+DuullllldRRRRuuluuulldRDuuldDlLDurrDuuulllldRlDRDullDuruurrrrdddRRRlld
+dlluRRluuuullldddrRRuruurDllulDDuulldRRRdddlUULdlUlldRRRurrddlUruLLLrr
+dddllUdllUdrrrrrrrruLLruLLrrruLLLLrrrrddrruLLLdlUruLrrrddrddlUUruLLdlU
+ddrrrddddlluuUUUruLLrrrddddLrddlluUUUruL
+
+Solution 838/299
+urrrrrrrrrruuuuuuuuuulDldRurDDDDDDDDrdLLLLLLLLLulDrdLrrruuuuurrrrrruuu
+ulllluRRRlldllluRRRdllllluRRRdllllluRRRdrrrrrrrruulDDDDDDDDDrdLLLLLLLL
+uuurrrrruuurruullluRRurDDDDDDDDDrdLLLLLLLuuuurrrrrruuuullllluRRRRurDDD
+DDDDrdLLLLLLuuuurrrrruullllllluRRRRRRurDDDDDDDrdLLLLLuuuurrrrruuullllu
+RRlldlluRRdlllluRRdlllluRRdlllluRRdrrrrrrrrrruulDDDDDDurrrddllLLLLLrrr
+ruuuullluuRRdlllluRRdlllluRRdlllluRRdrrrrrrrruulDDDDDDurrrddllLLLLrrrr
+ruuuuullllluRRdrruulDrdLLLLLLLLLulluurDrdLuuurDDurDDRdrrULLululuRRRRRl
+ldLLrrurrdLLrDLLLLrrdddlluRUddrruLrrruLLrrruLLrrdrruLLruLLrruulDDDDrdL
+LLrrruuuurDDrdLLLLrrrddddddllldlUUluRRRRdrUUUUUruLLdlUdddrrddddlllldll
+uRdrUUluRRRRdrUUUUUUdddddddddddllllluUUluRRdrUUluRRRdrUUUUUruLdddddddl
+llllldldRdrUluRRdrUUUluRRRdrUUUUruulDrdLLLrrdddddddddlllllldllUluRRRRd
+rUUUUUluRRRRdrUUUUruLLrddddddddddlllllldlUUluRRRdrUUUUluRRRRdrUUUruL
+
+
+LaboriousLevels, "Laborious #02"
+
+  ###########
+ ##    #    #
+ #          ###
+ #  $$ $$ $$  #
+ # $$ $$ $$ # #
+ #          # #
+## ########## #
+#  #    #   # #
+#   $**.... # #
+#### .**+.. # #
+   # ...**. # #
+   # ..# **$  #
+   #       ####
+   #########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The idea of these levels is that they're not easy or hard, 
+just time-consuming. There are plenty of opportunities for deadlocks, 
+some subtler than others, but, for the most part, when you figure out a 
+solution, carrying it out will be a lengthy chain of repeated steps.
+
+Best Solution 693/219 (YASO 2.142 Optimizer)
+DurrdLLLLdlluurDrddrrUdrUdrUUruullllDuullDDuRDDuuullDlluuurrrrrrrrruUr
+rddddddddlLLdlllllluuUrrrrrurDrddrruuuuuuuullLulllldDldllldddrRddddrrr
+ruRdllllluuuuRurrDulDDRRRDuullllllluuuuuurrrrrrDDLdLLLLrrrruruulllllld
+dDDDldRRRRRurDldRRurDullllllluuuuuurrrDrDrdLLLLrrruuullldDlDDDldRRRRRR
+RRurrddddrruuuuuuuulllLulDulDlddllLulDDDldRRRurDllluuurrrruurrrrrddllL
+LLLLLulDDDldRRRdRRRRlluulDllluuurrrruurrrDurrddlLLLLLLLulDDDldRRRdRRRu
+ullDllluuurrrruurDurrddlLLLLLulDDDldRRRRRurDllllluuuuuurrrdDurrrrrrdLu
+uurDlllllldLLulDDDDDldRRRRurDrrrurrddddrruuuuuuuulLLLLLLLLLulDDDDDldRR
+RRRRRlllllluuuuurrrdLLulDDDDldRRRRRRllllluuuurrrrdLLLulDDDldRRRRRllllu
+uuuurrrrrrrDrdLLLLLLLulDDDldRRRRllluuurrrrrrruLLLLLLulDDDDldRRR
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:11
+Optimizer date: 2020-07-02  16:37:21
+Optimizer metrics: Pushes, moves
+
+Solution 843/219
+DurrdLLLLddrrrUdrUUddlllllluuurDrddrrUrruruullllDuullDRDDuulDuulDlluuu
+rrrrrrrrruUrrddddddddlLLruuulDrddldlllllluuUrrrrrrrddrruuuuuuuullLulll
+ldDldllldddrRRurDDuurDldRRRurrdddldlluRdllllluuurrrrrDuurrdddrruuuuuuu
+ullddllllLLLLrrruuurrDDuulllDDuulllddDDDldRRRRRurDldRRurDurrdddrruuuuu
+uuulllullddLLdLLLrrruuullldDlDDDldRRRRRRRRurrddddrruuuuuuuulllLullDldd
+llLulDDDldRRRRRurDldRRururrddddrruuuuuuuullddllLLLLLLulDDDldRRRRRurDld
+RurrurrddddrruuuuuuuullllDuulDlllDrdLLLulDDDldRRRRRurDrrurrddddrruuuuu
+uuullddlLLLLLLLulDDDldRRRurDrrrrurrddddrruuuuuuuulldLulllDllLLrruLulDD
+ulDDDDldRRRRurDrrrurrddddrruuuuuuuulllddllLLulldLulDDDldRRRRuldlluuuuu
+urrrrrrrrurDlllllllllddddddrrrurrdrrurrddddrruuuuuuuulLLLLLLLLLulDrddl
+dddrrrRRRlllllluuurrurrdLLululDDDDldRRRRRRllllluuuurrdLulDDDldRRRRRlll
+luuuuurrrrrrrDrdLLLLLLLrrrrrruLulDrdLLLLullDDDldRRRRllluuuurrdLulDDDld
+RRR
+
+
+LaboriousLevels, "Laborious #03"
+
+        ######
+ ########    ###
+ #        .*.  #
+## **..**.*+*  #
+#  .**..**.*.  #
+#             ##
+#  ############
+##   #  #     #
+ #   $ $  $   #
+ ##  $ $$ $$  #
+  #  $  $  $  #
+  #    #  #  ##
+  ############
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The idea of these levels is that they're not easy or hard, 
+just time-consuming. There are plenty of opportunities for deadlocks, 
+some subtler than others, but, for the most part, when you figure out a 
+solution, carrying it out will be a lengthy chain of repeated steps.
+
+Best Solution 584/211 (YASO 2.142 Optimizer)
+RurrdLululldRlldRdRUddlllluURRRddllURRllluRRllluRRRllllllDRRRRRddllllU
+RRRRRdllllllluRRRRRdrUllllllddddrrdddrruLLdlUUUruLdlUUUluRRRluRRRddlUl
+llddddrrddrruuLLdlUruLdlUUUluRRRRdrUllllddddrrrrdLLdlUUruLdlUUUluRRdrU
+llddddrrrrddrRdrUrRUrrdLLLLLLLLLdlUUUruLdlUUUluRdrUlddddrrrrddrrrrrruu
+ullldDuurrrdddllLLLLLLdlUUUruLdlUUUluRRRRRRRllllllddddrrrrddrrruuurrDL
+ulDlLLLLdlUruLdlUUUluRRRRRRlllllddddrrrrddrrUdrrrruulllLLLLLdlUruLdlUU
+UluRRRRRllllddddrrrrrrdLLLLdlUUruLdlUUUluRRRRlllddddrrrrrrddrrULLLLLLd
+lUUruLdlUUUluRRRllddddrrrrrrrurrdLLLLLLLdlUruLdlUUUluRRlddddrrrrrrrrrr
+dLLLLLLLLdlUUruLdlUUUluR
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:10
+Optimizer date: 2020-07-02  17:06:52
+Optimizer metrics: Pushes, moves
+
+Solution 624/217
+RdrruLululldRlldRdRUllullDRRRddlUdllURRRuulldRdrUllulldRRRllllullDRRRR
+RddllllURRRRRlllluulldRRRRlllddlUluRRRRlllldddddrrdddrruLLrruuLLdlUruL
+dlUUUluRRRRdrUllllddddrrdddlUUUruLdlUUUluRRRdrUlllddddrrrrdLLdlUUruLdl
+UUUluRRdrUllddddrrddrrrRdrUrRdrUruullDurrdLdLLLLLLLLdlUUUddrrrrrrrrruu
+lulldDuurrdLulDrrrddllLLLLLLdlUruuuLdlUUUluRdrUlddddrrddlUUruLdlUUUluR
+RRRRRRllllllddddrrrrddrrrrrruullllDuLLLLdlUruLdlUUUluRRRRRRlllllddddrr
+rrrrdLLLLdlUUruLdlUUUluRRRRRllllddddrrrrrrrrrrddlllLLLLLdlUUUruLdlUUUl
+uRRRRlllddddrrrrrrrrDLLLLLLdlUUrrrrrrrrrdLLLLLLLLuuLrdddlUUrrrrrrrrddL
+LLLLLLdlUruullUUUluRRRllddddrruLrdddlUUlUUUluRRlddddrruLdlUUUluR
+
+Solution 686/217
+RdrruLddllllllllllldddrrdRlddrruLLdlUUUddrrrrRdrUrRdrUruuulllldlLDurru
+rrrrdddlllllLLLLdlUruuuLdlUUUrrrruuurrrrRllllldddrrrrrUURdrruulDrdLdll
+llllluuurrrdRRllullDRRRddlUUluRdddllUluRRRlldRRRlllluulllDRRRRRllddlll
+UdrrruuulllldRRRRRddlllllluRdrrURRRRRlllluulldRRRlllldRRRRRRlllllldddd
+rrddlUUruLdlUUUluRRRRdrUllllddddrrdrdrruLLLdlUUruLdlUUUluRRRdrUllldddd
+rrdrrruulDLLdlUruLdlUUUluRRdrUllddddrrddrrruLLLdlUUruLdlUUUluRdrUdlddd
+rrrrrrrurrdLLLLLLLdlUruLdlUUUluRRRRRRlllllddddrrrrrrrrrrrddllUdllULLLL
+LdlUUruLdlUUUluRRRRRllllddddrrdrrrrrdrruLLLLLLLdlUUruLdlUUUluRRRRllldd
+ddrrrrrrdrruLLLLLLdlUruLdlUUUluRRRllddddrrrrrrrrddrrruLLLLLLLLLdlUUrrr
+rrrrurrdLLLLLLdlluuLdlUUUluRRlddddrrdrruLLdlUruLdlUUUluR
+
+
+LaboriousLevels, "Laborious #04"
+
+        ######
+     ####    ##
+    ##  # +   ###
+#####  *  *  *  ###
+#  # * #*  #*  *  #
+#     *  # #  *   #
+#    ## ##$# #    #
+#  #**     #  #**##
+##    ##   ###    #
+ ##   * ####  *   #
+  #  *  * # *  *  #
+  ###  *  *  *  ###
+    ###   *   ###
+      #   #   #
+      #########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: The idea of these levels is that they're not easy or hard, 
+just time-consuming. There are plenty of opportunities for deadlocks, 
+some subtler than others, but, for the most part, when you figure out a 
+solution, carrying it out will be a lengthy chain of repeated steps.
+
+Best Solution 103/34 (YASO 2.142 Optimizer)
+lddrUrrRdrRuLrddrruLddDDrddlUUllDldDrUdllddrUllLLdlluRRulLulLdRluulldR
+uulluurrDRddlUruRRRdrruUUUdddLLLL
+
+Optimizer: YASO 2.142
+Optimizer time: 00:00:10
+Optimizer date: 2020-07-02  18:12:03
+Optimizer metrics: Pushes, moves
+
+Solution 117/34
+lddrUrrRdrRuLrddrruLddDDrddlUUddLdlLuRlddlluRdlLLdlluRRluLulLdRluulldR
+uulluurrDRRRRdrruUUUddddllulllddlUrurrrdrruLLLL
+
+Solution 157/44
+lddrUrrurDrrDrddllUlURddrruLrdDDrddlUUdlLddLdlluuRuRldlddrruruLddlluRl
+dLLdlluRRulLulLdRluulldRuuURRRRdrruUUUddddllulllldlluururDDDurrrrdrruL
+LLLLdllddrUluRdrU
+
+Solution 222/56
+lddrUrrurDrrDrddllUlURddrruLdDurDDrddlUUdlUdLrrdLdlLuRlddlluuRuRldlddr
+ruruLddlluRlLrdLLdlluRRluRlLuuLLrdLrrdrruLLulldRRlldRuululldRRlldRuuUR
+RRRdrruUUUddddllulllldlluuurrDllddrrrurrrdrruuuuluuRlddrUddddLLLLrrrru
+uuuluurrDrdL
+
+
+LaboriousLevels, "Laborious #05"
+
+####
+####
+#  #######
+#        #
+#        #
+## #### ####
+ # #  # #  #
+ # #   **  #
+ # #  **   #
+ # #  +    #
+## ###$#  ##
+#      ####
+#   #  #
+#  #####
+####
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: WORK IN PROGRESS
+
+
+LaboriousLevels, "Laborious #06"
+
+######
+######
+#    #
+#    ##
+#  $*.##
+## *@* ##
+ ##.*$  #
+  ##    #
+   #    #
+   ######
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: WORK IN PROGRESS
+
+
+LaboriousLevels, "Laborious #07"
+
+#########
+ ########
+ #      #
+ # #### ####
+ # #  # #  ##
+## #   *    #
+#  #    *   #
+# #### *+*  #
+# #     *   #
+# #      * ##
+# #  #### ##
+# ####   $#
+#      #  #
+###########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: WORK IN PROGRESS
+
+
+LaboriousLevels, "Laborious #08"
+
+#########
+    #####
+ ####   #
+ #      ####
+ #     ##  #
+ # ###$    #
+ # #  **   #
+ # #   ** ####
+## ###    #  #
+#    #### #  #
+#     #  **  #
+####  #   *+ #
+  #   ## #   #
+  #      #####
+  #####  #
+      ####
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: WORK IN PROGRESS
+
+
+LaboriousLevels, "Laborious #09"
+
+##################
+             #####
+##############   #
+#                #
+#  ########### ###
+## #         # #
+ # #         # ##
+ # $**+#   **   #
+ # # **   **    #
+ # #   #    ## ##
+ # ##  #     # #
+##  #  ####  # #
+#   ####  #### #
+#              #
+#############  #
+            ####
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: WORK IN PROGRESS
+
+
+LaboriousLevels, "Laborious #10"
+
+###########
+   ########
+   #      #
+#####  ## #
+#    $$   #
+#  .**  # #
+## **  ## ##
+ #     #   #
+#####  #   #
+#     ## # #
+#  **      #
+# *+* ######
+#     #
+#######
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: WORK IN PROGRESS
+
+
+LaboriousLevels, "Laborious #11"
+
+#################
+ ################
+ #  #   #  #    #
+##       #  #   #
+#  **   **   ** #
+# $*.    *  $*+ #
+#   #    #   #  #
+#  #    #     # #
+#################
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: WORK IN PROGRESS
+
+
+LaboriousLevels, "Laborious #12"
+
+######
+######
+#    #
+# +* #
+##**##
+# $  #
+#    #
+#    #
+# .* #
+##**##
+# $  #
+#    #
+#    #
+# .* #
+##**##
+# $  #
+#    #
+#    #
+##  ##
+ ####
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+LaboriousLevels, "Laborious #13"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: Although these are valid Sokoban levels, each with at
+least one valid solution, the purpose of these levels is to illustrate certain
+facts about Sokoban, or certain arrangements of initial state in Sokoban
+levels, or situations that sometimes arise in the course of trying to solve a
+Sokoban level.
+
+
+LaboriousLevels, "Laborious #14"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+LaboriousLevels, "Laborious #15"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+LaboriousLevels, "Laborious #16"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+LaboriousLevels, "Laborious #17"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+LaboriousLevels, "Laborious #18"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+LaboriousLevels, "Laborious #19"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER
+
+
+LaboriousLevels, "Laborious #20"
+
+########
+########
+## +$ ##
+## ## ##
+##    ##
+########
+########
+
+Author: Alonso del Arte
+Email: sokoban@mail.com
+Original level website: https://github.com/Alonso-del-Arte/
+
+These levels are copyright (c) by Alonso del Arte and may be freely
+distributed for non-commercial use.
+
+Author's note: PLACEHOLDER

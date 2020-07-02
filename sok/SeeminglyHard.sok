@@ -121,7 +121,7 @@
 ::                                                        ::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Date Created: 2020-05-26  14:45:09
-Date of Last Change: 2020-06-10  21:12:57
+Date of Last Change: 2020-06-24  19:35:03
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 These levels are Copyright (c) by Alonso del Arte
@@ -248,7 +248,7 @@ SeeminglyHard, "#04"
   #  ##   ## #
 ### ##  $  # #
 #      *+*.# #
-#      ## ## #
+#       #  # #
 ######### ## #
      #   $   #
      #### # ##
@@ -279,6 +279,10 @@ Optimizer metrics: Pushes, moves
 
 Solution 34/11
 LrRuulDldLdlluRRurrrdddDrrddllUUUU
+
+Solution 88/25
+LLLLLrrrruurrdrdLLLLLrruRurDldRlllldlluRRRRlllldlluRRRRRllluurururrrrr
+rdrddddddlddlluUUU
 
 Solution 114/19
 LLLLLrrrruurrdrdLLruulldldllluurururrrrrrdrddddddlddlluUUUddrrruuuuuul
@@ -332,12 +336,18 @@ Solution 97/19
 rdRluuUUUlldlllddlllddrrrrrrRurrdLLrdddLddlllllluuullluuuuuurrruurrrur
 rrrDDDDDrddlUddddlLLulldRRR
 
+Solution 221/43
+ruUUUdddddLLLLLLrrrrrrRRRRRRlllllldddLLLrrrRRRllddrrrrrruuurrruuuuuull
+luulllullllDDDDuulldlllddlllddRRRRRllllluurrruurrrurrrrdrrrddrrrddLLLL
+LrrrrruullluulllulluulllldlllddlllddddddrrrdddrrrrrruullulldRRRRddrruu
+LrrrurrdLLL
+
 
 SeeminglyHard, "#06"
 
-   ###########
-   #    .    #
-#### ###$#####
+   #######
+   #    .#
+#### ###$####
 #    #      ##
 #   .#      .#
 ## ###      ####
@@ -375,10 +385,9 @@ Optimizer time: 00:00:38
 Optimizer date: 2020-05-17  14:58:34
 Optimizer metrics: Pushes, moves
 
-SaveGame 144/34
-DrdLLLLLLdlUUUUUUUUrruuurrrrDDuulllldddllluRRlddddddddrrrrruUruLLLuuru
-uurruulllldDuurrrrddlddrUUUddddddrrdLulDDrdrrrruuuuuLrdddddlllluuuurrU
-UluR
+Solution 134/36
+DrdLLLLLLdlUUUUUUUUluRdrruuurrrrDDuulllldddlluRlddddddddrrrrruUruLLLru
+uuuurruulllldDuurrrrddlddrUUUddddddrrdLulDDrdrrrruuuuuLLdlUUluRR
 
 Solution 140/36
 DrdLLLLLLdlUUUUUUUUrruuurrrrDDuulllldddllluRRlddddddddrrrrrruuuuuluuur
@@ -394,10 +403,15 @@ DlUruLLLrrrddrdLLLLLLdlUUUUUUUUrruuurrrrDDuulllldddllluRRlddddddddrrrr
 ruuuuuuuuruulllldDuurrrrddlddrUUUdddddddddrrrrruuuuuLLdlUUluRRdddddlLu
 lDD
 
-Solution 153/32 (YASO 2.142 Optimizer)
-DlUddllllluuuuuuuurruurrrrDDrdddddlLLLrrrddrdrrrruuuuuLrdddddllllLLLLL
-LdlUUUUUUUddddddrrrrrruuuurrrUUlluuluullllddllldRRuruurrrrddlddrUUUddr
-rRdddddlLulDD
+Solution 144/34
+DrdLLLLLLdlUUUUUUUUrruuurrrrDDuulllldddllluRRlddddddddrrrrruUruLLLuuru
+uurruulllldDuurrrrddlddrUUUddddddrrdLulDDrdrrrruuuuuLrdddddlllluuuurrU
+UluR
+
+Solution 174/48
+urrdLddrrrruuuLLLulDDDuurrrrdddlllLLLLLLLdlUUUUUUUUrruuurrrrDDuulllldd
+dllluRRlddddddddrrrrruUluRRRRRlluuuuuluulllldDuurrrrddlddrUUUddddddrdL
+DlUruLLLrrrrdddrrrruuuuuLLdlUUluRR
 
 
 SeeminglyHard, "#07"
@@ -443,6 +457,15 @@ Solution 118/48
 uurrrrddddllulUUluRRRRurDDDDrdLLuuuullldddLLUUruLLLLulDDDDDDuuuuurrrrd
 dlDDDDDldRuurRRRRRllllUUUddLLdlUrrrRluurrdDDDrdL
 
+Solution 134/52
+uurrrrddddlldddllluRRRRRlluuulUUluRRRRurDDDDrdLLuuuullldddLdDDDldRlluu
+uuuuRRdLulDDDDDldRuurruLLdlUdrrrrruLdlUUUUUddrruLuuLLLLLulDDDDDD
+
+Solution 161/58
+uurrrrddddlldddllluRRRRRlluuulUUluRRRRurDDDDrdLLuuuullldddLLruulDlDDDD
+DldRuurrUUULulDDDlddrruLdlUUrRluurrdDDldRurDruuLruullUUruLLLLLulDDDDDD
+uuuuurrrrdddldddrrUUU
+
 
 SeeminglyHard, "#08"
 
@@ -480,6 +503,12 @@ Optimizer: YASO 2.142
 Optimizer time: 00:00:24
 Optimizer date: 2020-05-18  13:44:04
 Optimizer metrics: Pushes, moves
+
+Solution 230/85
+urrdDDDDrdLLLLLLullddrUUUUUUdddddrrrrrruuuuuulldRurDDDDDrdLLLLLLullddr
+UUUUdddrrrrrruuuuuuulllldRRRurDDDDDDrdLLLLLLullddrUluRRRRdrrruuuuuulll
+ldRRRurDDDDuuuRddlllUUUUUdddddlUUUUluRRRdrUddddrrrruullDldRRRllllulldR
+RRRRluurrdrrddlUUruL
 
 Solution 237/87
 urrdDDDDrdLLLLLLullddrUUUUUUdddddrrrrrruuuuuulldRurDDDDDrdLLLLLLullddr
@@ -535,6 +564,10 @@ Solution 117/21
 uuuurrrrddrdrrrrurrrrDrrddrrrrrrruuurDRluRRDuRRdrruLLLLdlluRdrUrrddddd
 dllulllllllllllluuUUdlUdlUddlllllddllluuulLUdrU
 
+Solution 120/21
+uuuurrrrddrdrrrrurrrrDrrddrrrrrrruuurDRluRRRRllDurrurrdLLLLdlluRdrUrrd
+dddddllulllllllllllluuUUdlUdlUddlllllddllluuulUdLU
+
 Solution 211/29
 RUluuurrrrddrdrrrrurrDurDlurrDrrddrrrrrrruuurRlDurRlldRurDuRRdrruLLLLd
 lluRdrUrrddddddllulllllllllllluuUUddddllllllluurrrrrUUdRldlllllddrrrrr
@@ -549,12 +582,12 @@ SeeminglyHard, "#10"
 # ### ####
 # #  $.  ##
 # ## .$   ##
-# ### .$   ##
-# # ##  #   ##
-# #  ## .$   ##
+#  ## .$   ##
+# ####  #   ##
+# ## ## .$   ##
 # #   ## .$   ##
-# #    ## .$   ##
-# #######  .$   ##
+# #  #### .$   ##
+# ##### #  .$   ##
 #$   $ .#   .$@  #
 #.#### ######### #
 ###  #           #
@@ -580,10 +613,18 @@ Optimizer time: 00:00:08
 Optimizer date: 2020-05-18  14:23:48
 Optimizer metrics: Pushes, moves
 
-SaveGame 83/13
+Solution 83/13
 uullululDlddrrUdlluulululululuRuulllldddddddddDrrrRRddrrrrrrrrrruullLu
 LuuLLuLuulLuL
+
+Solution 87/19
+LLLulluulululululuRuulllldddddddddDrrrRRddrrrrrrrrrruulllllulldRRRRurr
+dLLuLuLuLuLuulLuL
 
 Solution 95/15
 uulluullDllululululuRuulllldddddddddDrrrRRddrrrrrrrrrruulluullulllddrU
 RurrddrdLuLruLLuLuLuulLuL
+
+Solution 131/25
+LLLrrrrrddlllllllllluuLLLrrrddrrrrrrrrrruulllllulluulululululuRuulllld
+ddddddddDRRRRRddrrrrrrrrrruulllllulldRRRRurrdLLuLuLuLuLuulLuL
