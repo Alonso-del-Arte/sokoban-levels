@@ -8,3 +8,4 @@ I've uploaded some of the levels to Game-Sokoban.com:
 - Extremely Easy No. 5 http://www.game-sokoban.com/index.php?mode=ulevel&lid=2549
 - Seemingly Hard No. 4 http://www.game-sokoban.com/index.php?mode=ulevel&lid=2550 and a few others of that set
 - Frustratingly Difficult No. 1 http://www.game-sokoban.com/index.php?mode=ulevel&lid=2556 and a few others of that set
+- Illustrative No. 7 http://www.game-sokoban.com/index.php?mode=ulevel&lid=2562 and a few others of that set
